@@ -12,32 +12,45 @@
     "cache_response": {
       "requirement": "optional"
     },
+    "device": {
+      "requirement": "optional",
+      "group": "context"
+    },
     "certificate": {
-      "requirement": "optional"
+      "requirement": "optional",
+      "group": "context"
     },
     "http_cookies": {
-      "requirement": "optional"
+      "requirement": "optional",
+      "group": "context"
     },
     "http_request": {
-      "requirement": "required"
+      "requirement": "required",
+      "group": "primary"
     },
     "http_response": {
-      "requirement": "required"
+      "requirement": "required",
+      "group": "primary"
     },
     "identity": {
-      "requirement": "optional"
+      "requirement": "optional",
+      "group": "context"
     },
     "integration": {
-      "requirement": "optional"
+      "requirement": "optional",
+      "group": "context"
     },
     "load_balancer": {
-      "requirement": "optional"
+      "requirement": "optional",
+      "group": "context"
     },
     "network_traffic": {
-      "requirement": "optional"
+      "requirement": "optional",
+      "group": "context"
     },
     "object_storage": {
-      "requirement": "optional"
+      "requirement": "optional",
+      "group": "context"
     },
     "owner": {
       "description": "The canonical user ID(alternate AWS account id) of the owner of the source bucket.",
@@ -52,10 +65,12 @@
       "requirement": "optional"
     },
     "src_endpoint": {
-      "requirement": "required"
+      "requirement": "required",
+      "group": "primary"
     },
     "tls": {
-      "requirement": "optional"
+      "requirement": "optional",
+      "group": "context"
     }
   }
 }
