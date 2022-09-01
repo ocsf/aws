@@ -1,0 +1,19 @@
+{
+    "description": "Details pertaining to the API requests",
+    "caption": "Request Parameters",
+    "name": "request",
+    "extends": "object",
+    "attributes": {
+      "flags": {
+        "requirement": "optional"
+      },
+      "parameters": {
+        "caption": "Request Parameters",
+        "requirement": "recommended"
+      },
+      "uid": {
+        "description": "The unique request identifier.",
+        "requirement": "required"
+      }
+    }
+  }

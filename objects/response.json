@@ -1,0 +1,28 @@
+{
+    "description": "Details pertaining to the API response",
+    "caption": "Response Elements",
+    "name": "response",
+    "extends": "object",
+    "attributes": {
+      "code": {
+        "requirement": "recommended"
+      },
+      "error": {
+        "requirement": "recommended"
+      },
+      "error_message": {
+        "requirement": "recommended"
+      },
+      "flags": {
+        "requirement": "optional"
+      },
+      "message": {
+        "requirement": "recommended"
+      },
+      "elements": {
+        "caption": "Response Elements",
+        "requirement": "recommended"
+      }
+    }
+  }
+  
