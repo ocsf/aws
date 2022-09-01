@@ -84,6 +84,11 @@
       "description": "The desired status of the target",
       "type": "string_t"
     },
+    "elements": {
+      "caption": "Response Elements",
+      "description": "The elements returned during an API response",
+      "type": "json_t"
+    },
     "event_reason": {
       "caption": "event_reason",
       "description": "The provided reason to describe why an event has been logged",
@@ -244,6 +249,11 @@
       "caption": "Overrides",
       "description": "A list of any overrides present to take precedent over the default values for the container runtime",
       "type": "string_t"
+    },
+    "parameters": {
+      "caption": "Request Parameters",
+      "description": "The parameters sent with an API request",
+      "type": "json_t"
     },
     "pem": {
       "caption": "PEM",
