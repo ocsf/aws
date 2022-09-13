@@ -1,5 +1,5 @@
 {
-  "uid": 1,
+  "uid": 2,
   "category": "application",
   "description": "A general purpose schema for varied Access Logs",
   "extends": "base_event",
