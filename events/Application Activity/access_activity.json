@@ -1,7 +1,7 @@
 {
     "uid": 1,
     "category": "application",
-    "description": "Access activity events describe successful/failed attempts to access an application ",
+    "description": "Access activity events describe successful/failed attempts to access an application.",
     "extends": "base_event",
     "caption": "Access Activity",
     "name": "access_activity",
@@ -10,19 +10,19 @@
             "enum": {
                 "1": {
                     "caption": "Access Granted",
-                    "description": "The incoming request has permission to the application resource"
+                    "description": "The incoming request has permission to the application resource."
                 },
                 "2": {
                     "caption": "Access Denied",
-                    "description": "The incoming request does not have permission to the application resource"
+                    "description": "The incoming request does not have permission to the application resource."
                 },
                 "3": {
                     "caption": "Access Revoked",
-                    "description": "The incoming request's access has been revoked due to security policy enforcements /changes. (i.e. security state of device changes)"
+                    "description": "The incoming request's access has been revoked due to security policy enforcements/changes. (i.e. security state of device changes)"
                 },
                 "4": {
                     "caption": "Access Error",
-                    "description": "An error occurred during packet processing"
+                    "description": "An error occurred during processing the request."
                 }
             }
         },
