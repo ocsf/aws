@@ -26,10 +26,6 @@
                 }
             }
         },
-        "device": {
-            "requirement": "optional",
-            "group": "context"
-        },
         "http_request": {
             "requirement": "required",
             "group": "primary"
@@ -43,8 +39,14 @@
             "group": "context"
         },
         "src_endpoint": {
-            "requirement": "required",
+            "description": "Details about the source endpoint of the connection.",
+            "requirement": "recommended",
             "group": "primary"
+        },
+        "proxy": {
+            "description": "Details about the proxy if available.",
+            "requirement": "optional",
+            "group": "context"
         },
         "tls": {
             "requirement": "optional",
