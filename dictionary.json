@@ -74,6 +74,16 @@
       "description": "The CPU units allocated to a runtime environment. A container instance has 1,024 cpu units for every CPU core.",
       "type": "integer_t"
     },
+    "database_operation": {
+      "caption": "Database Operation",
+      "description": "The recorded action type. Possible values are: CONNECT, QUERY, READ, WRITE, CREATE, ALTER, RENAME, and DROP.",
+      "type": "string_t"
+    },
+    "database_name": {
+      "caption": "Database Name",
+      "description": "The name of the database",
+      "type": "string_t"
+    },
     "deployment_uid": {
       "caption": "deployment_uid",
       "description": "A unique identifer for a container deployment",
@@ -235,6 +245,11 @@
       "description": "The minimum TLS certificate's validty period",
       "type": "string_t"
     },
+    "object": {
+      "caption": "Object",
+      "description": "For Database QUERY events, this value indicates the query that the database performed.",
+      "type": "string_t"
+    },
     "object_storage": {
       "caption": "Object Storage",
       "description": "Object storage descriptors",
@@ -278,6 +293,11 @@
     "pod_uid": {
       "caption": "Pod ID",
       "description": "The unique ID of the pod inside the Kubernetes cluster",
+      "type": "string_t"
+    },
+    "query_uid": {
+      "caption": "Query UID",
+      "description": "The unique identifier for a database query",
       "type": "string_t"
     },
     "redirect_url": {
@@ -373,6 +393,11 @@
     "subject_dn": {
       "caption": "Subject DN",
       "description": "Subject Disinguished name (DN) of a digital certificate",
+      "type": "string_t"
+    },
+    "table": {
+      "caption": "Table",
+      "description": "The database TABLE in use for the operation",
       "type": "string_t"
     },
     "target_group_uid": {

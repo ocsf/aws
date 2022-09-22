@@ -1,0 +1,22 @@
+{
+    "uid": 11,
+    "category": "database",
+    "description": "Database Audit Activity",
+    "extends": "base_event",
+    "caption": "Database Audit Activity",
+    "name": "database_audit_activity",
+    "attributes": {
+        "src_endpoint": {
+            "requirement": "required"
+        },
+        "dst_endpoint": {
+            "requirement": "required"
+        },
+        "database_operation": {
+            "requirement": "required"
+        },
+        "connection_info": {
+            "requirement": "optional"
+        }
+    }
+}
