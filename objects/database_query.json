@@ -1,0 +1,13 @@
+{
+    "caption": "database_query",
+    "name": "database_query",
+    "description": "Describes a query made against a database",
+    "attributes": {
+        "uid": {
+            "requirement": "recommended"
+        },
+        "query_body": {
+            "requirement": "recommended"
+        }
+    }
+}

@@ -84,6 +84,11 @@
       "description": "The name of the database",
       "type": "string_t"
     },
+    "database_query": {
+      "caption": "Database Query",
+      "description": "The query that runs against a database",
+      "type": "database_query"
+    },
     "deployment_uid": {
       "caption": "deployment_uid",
       "description": "A unique identifer for a container deployment",
@@ -245,11 +250,6 @@
       "description": "The minimum TLS certificate's validty period",
       "type": "string_t"
     },
-    "object": {
-      "caption": "Object",
-      "description": "For Database QUERY events, this value indicates the query that the database performed.",
-      "type": "string_t"
-    },
     "object_storage": {
       "caption": "Object Storage",
       "description": "Object storage descriptors",
@@ -293,6 +293,11 @@
     "pod_uid": {
       "caption": "Pod ID",
       "description": "The unique ID of the pod inside the Kubernetes cluster",
+      "type": "string_t"
+    },
+    "query_body": {
+      "caption": "Query Body",
+      "description": "The body of the query that runs against the database",
       "type": "string_t"
     },
     "query_uid": {

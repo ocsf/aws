@@ -6,9 +6,6 @@
         "connection_uid": {
             "requirement": "recommended"
         },
-        "query_uid": {
-            "requirement": "recommended"
-        },
         "operation": {
             "requirement": "recommended"
         },
@@ -16,9 +13,6 @@
             "requirement": "required"
         },
         "table": {
-            "requirement": "optional"
-        },
-        "object": {
             "requirement": "optional"
         },
         "code": {
