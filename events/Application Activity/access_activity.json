@@ -5,7 +5,13 @@
     "extends": "base_event",
     "caption": "Access Activity",
     "name": "access_activity",
+    "profiles": [
+        "host"
+      ],
     "attributes": {
+        "$include": [
+            "profiles/host.json"
+          ],
         "activity_id": {
             "enum": {
                 "1": {
