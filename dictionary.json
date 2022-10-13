@@ -479,6 +479,11 @@
       "requirement": "required",
       "type": "long_t"
     },
+    "update_time": {
+      "description": "The time when the instance was update",
+      "requirement": "optional",
+      "type": "timestamp_t"
+    },
     "url_path": {
       "caption": "URL Path",
       "description": "The URL path as extracted from the URL. For example: <code>/download/trouble</code>.",
