@@ -1,6 +1,6 @@
 {
     "uid": 1,
-    "category": "application",
+    "category": "dev",
     "description": "Access activity events describe successful/failed attempts to access an application.",
     "extends": "base_event",
     "caption": "Access Activity",

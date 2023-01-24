@@ -1,6 +1,6 @@
 {
-  "uid": 7,
-  "category": "application",
+  "uid": 3,
+  "category": "dev",
   "description": "Web Firewall activity",
   "extends": "base_event",
   "caption": "Web Firewall",

@@ -1,6 +1,6 @@
 {
   "uid": 2,
-  "category": "application",
+  "category": "dev",
   "description": "A general purpose schema for varied Access Logs",
   "extends": "base_event",
   "caption": "Access Logs",
