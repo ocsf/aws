@@ -1,6 +1,6 @@
 {
     "uid": 10,
-    "category": "virtualization",
+    "category": "dev",
     "description": "Container Control Plane Activity (e.g. EKS Audit Logs)",
     "extends": "base_event",
     "caption": "Container Control Plane",
