@@ -1,6 +1,6 @@
 {
     "uid": 11,
-    "category": "database",
+    "category": "dev",
     "description": "Database Audit Activity",
     "extends": "base_event",
     "caption": "Database Audit Activity",
