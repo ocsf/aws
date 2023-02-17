@@ -1,7 +1,7 @@
 {
   "uid": 15,
   "category": "network",
-  "description": "Network Flow Activity events.",
+  "description": "Network Flow Activity Events.",
   "extends": "base_event",
   "caption": "Network Flow Activity",
   "name": "network_flow_activity",
