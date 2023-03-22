@@ -1,0 +1,48 @@
+{
+    "uid": 99,
+    "description": "A placeholder class, ",
+    "extends": "base_event",
+    "caption": "Placeholder",
+    "name": "combined_placeholder",
+    "category": "dev",
+    "attributes": {
+        "api": {
+            "group": "primary",
+            "requirement": "required",
+            "profile": null
+        },
+        "dst_endpoint": {
+            "group": "primary",
+            "requirement": "optional"
+        },
+        "http_request": {
+            "description":"Details about the underlying http request.",
+            "group": "primary",
+            "requirement": "optional"
+        },
+        "actor": {
+            "group": "primary",
+            "requirement": "required"
+        },
+        "mfa": {
+            "group": "primary",
+            "requirement": "optional"
+          },
+        "resources": {
+            "description": "Details about resources that were affected by the activity/event.",
+            "group": "primary",
+            "requirement": "recommended"
+        },
+        "src_endpoint": {
+            "description": "Details about the source of the activity.",
+            "group": "primary",
+            "requirement": "required"
+        },
+        "user": {
+            "description": "The target identity (user/role) to authenticate.",
+            "group": "primary",
+            "requirement": "required"
+          }
+
+    }
+}
