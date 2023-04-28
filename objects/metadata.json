@@ -1,0 +1,12 @@
+{
+  "description": "The metadata associated with the event.",
+  "caption": "Metadata",
+  "name": "metadata",
+  "extends": "metadata",
+  "attributes": {
+    "asl_version": {
+      "requirement": "optional",
+      "profile": "cloud"
+    }
+  }
+}

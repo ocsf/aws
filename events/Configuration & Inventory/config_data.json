@@ -1,6 +1,6 @@
 {
     "uid": 9,
-    "category": "inventory",
+    "category": "discovery",
     "description": "Configuration & Inventory Data",
     "extends": "base_event",
     "caption": "Config",
