@@ -19,6 +19,12 @@
       "is_array": true,
       "type": "aws_rule"
     },
+    "asl_version": {
+      "caption": "Amazon Security Lake Version",
+      "description": "The version of Amazon Security Lake.",
+      "type": "string_t"
+      
+    },
     "authentication_type": {
       "caption": "Authentication Type",
       "description": "The type of authentication used, e.g. AuthHeader for authentication headers, QueryString for query string (pre-signed URL) or a - for unauthenticated requests.",
