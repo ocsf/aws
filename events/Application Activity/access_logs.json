@@ -32,7 +32,7 @@
       "requirement": "required",
       "group": "primary"
     },
-    "identity": {
+    "actor": {
       "requirement": "optional",
       "group": "context"
     },
