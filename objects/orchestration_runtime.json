@@ -21,11 +21,6 @@
     },
     "overrides": {
       "requirement": "optional"
-    },   
-    "resource_uid": {
-      "description": "FIXME",
-      "requirement": "optional"
     }
-
   }
 }
