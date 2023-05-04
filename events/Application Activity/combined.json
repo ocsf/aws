@@ -1,6 +1,6 @@
 {
     "uid": 99,
-    "description": "A placeholder class, ",
+    "description": "A combination class.",
     "extends": "base_event",
     "caption": "Placeholder",
     "name": "combined_placeholder",

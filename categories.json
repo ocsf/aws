@@ -7,11 +7,6 @@
       "caption": "Development",
       "description": "In dev classes",
       "uid": 98
-    },
-    "deprecated": {
-      "caption": "Deprecated",
-      "description": "Catch All, will be deleted later",
-      "uid": 99
     }
   }
 }
