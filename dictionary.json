@@ -256,10 +256,10 @@
       "description": "The minimum TLS certificate's validty period",
       "type": "string_t"
     },
-    "object_storage": {
-      "caption": "Object Storage",
-      "description": "Object storage descriptors",
-      "type": "object_storage"
+    "data_bucket": {
+      "caption":"Data Bucket",
+      "description": "Data Bucket descriptors, e.g. Details about AWS S3 buckets.",
+      "type": "data_bucket"
     },
     "orchestration": {
       "caption": "Container Orchestration",

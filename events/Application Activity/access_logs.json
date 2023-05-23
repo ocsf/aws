@@ -48,7 +48,7 @@
       "requirement": "optional",
       "group": "context"
     },
-    "object_storage": {
+    "data_bucket": {
       "requirement": "optional",
       "group": "context"
     },

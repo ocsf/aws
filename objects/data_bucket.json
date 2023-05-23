@@ -1,7 +1,7 @@
 {
-  "description": "",
-  "caption": "object_storage",
-  "name": "object_storage",
+  "description": "Data Bucket descriptors, e.g. Details about AWS S3 buckets.",
+  "caption": "Data Bucket",
+  "name": "data_bucket",
   "attributes": {
     "error": {
       "requirement": "optional"
