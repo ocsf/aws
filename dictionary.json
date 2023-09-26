@@ -3,6 +3,11 @@
   "description": "The Attribute Dictionary defines schema attributes and includes references to the events and objects in which they are used.",
   "name": "dictionary",
   "attributes": {
+    "accountid": {
+      "caption": "Amazon Security Lake - AWS Account ID",
+      "description": "The AWS Account ID that is used as a partition in the Amazon Security Lake instance.",
+      "type": "string_t"      
+    },
     "action": {
       "caption": "Action",
       "description": "The resultant action carried out in an event, e.g. allowed, blocked for network flows.",
@@ -21,9 +26,8 @@
     },
     "asl_version": {
       "caption": "Amazon Security Lake Version",
-      "description": "The version of Amazon Security Lake.",
-      "type": "string_t"
-      
+      "description": "The version of Amazon Security Lake instance.",
+      "type": "string_t"      
     },
     "authentication_type": {
       "caption": "Authentication Type",
