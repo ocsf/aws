@@ -1,0 +1,23 @@
+{
+  "caption": "Base Event",
+  "category": "other",
+  "description": "The base event is a generic and concrete event. It also defines a set of attributes available in most event classes. As a generic event that does not belong to any event category, it could be used to log events that are not otherwise defined by the schema.",
+  "extends": "base_event",
+  "name": "base_event",
+  "attributes": {
+    "accountid": {
+      "group": "context",
+      "requirement": "optional"
+    },
+    "asl_version": {
+      "group": "context",
+      "requirement": "optional"
+    },
+    "region": {
+      "caption": "Amazon Security Lake - AWS Region",
+      "description": "The AWS region that is used as a partition in the Amazon Security Lake instance..",
+      "group": "context",
+      "requirement": "optional"
+    }
+  }
+}
