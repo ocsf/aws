@@ -1,6 +1,6 @@
 {
   "caption": "AWS Categories",
-  "√ß": "category",
+  "name": "category",
   "description": "The AWS event categories.",
   "attributes": {
     "dev": {
