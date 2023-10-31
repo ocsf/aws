@@ -1,6 +1,6 @@
 {
     "uid": 99,
-    "description": "A combination class.",
+    "description": "A combination class used for CT..",
     "extends": "base_event",
     "caption": "Placeholder",
     "name": "combined_placeholder",
@@ -24,7 +24,7 @@
             "group": "primary",
             "requirement": "required"
         },
-        "mfa": {
+        "is_mfa": {
             "group": "primary",
             "requirement": "optional"
           },
