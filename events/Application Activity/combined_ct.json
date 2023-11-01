@@ -1,9 +1,9 @@
 {
     "uid": 99,
-    "description": "A combination class used for CT..",
+    "description": "A combination class used for CT.",
     "extends": "base_event",
-    "caption": "Placeholder",
-    "name": "combined_placeholder",
+    "caption": "Placeholder CT",
+    "name": "combined_ct",
     "category": "dev",
     "attributes": {
         "api": {
@@ -16,7 +16,7 @@
             "requirement": "optional"
         },
         "http_request": {
-            "description":"Details about the underlying http request.",
+            "description": "Details about the underlying http request.",
             "group": "primary",
             "requirement": "optional"
         },
@@ -27,7 +27,7 @@
         "is_mfa": {
             "group": "primary",
             "requirement": "optional"
-          },
+        },
         "resources": {
             "description": "Details about resources that were affected by the activity/event.",
             "group": "primary",
@@ -42,7 +42,6 @@
             "description": "The target identity (user/role) to authenticate.",
             "group": "primary",
             "requirement": "required"
-          }
-
+        }
     }
 }
