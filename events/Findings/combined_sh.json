@@ -1,0 +1,14 @@
+{
+    "uid": 98,
+    "description": "A combination class used for SH.",
+    "extends": "detection_finding",
+    "caption": "Placeholder SH",
+    "name": "combined_sh",
+    "category": "dev",
+    "attributes": {
+        "vulnerabilities":{},
+        "resource":{},
+        "remediation":{},
+        "compliance":{}
+    }
+}
