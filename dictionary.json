@@ -84,21 +84,6 @@
       "description": "The CPU units allocated to a runtime environment. A container instance has 1,024 cpu units for every CPU core.",
       "type": "integer_t"
     },
-    "database_operation": {
-      "caption": "Database Operation",
-      "description": "The recorded action type. Possible values are: CONNECT, QUERY, READ, WRITE, CREATE, ALTER, RENAME, and DROP.",
-      "type": "string_t"
-    },
-    "database_name": {
-      "caption": "Database Name",
-      "description": "The name of the database",
-      "type": "string_t"
-    },
-    "database_query": {
-      "caption": "Database Query",
-      "description": "The query that runs against a database",
-      "type": "database_query"
-    },
     "deployment_uid": {
       "caption": "deployment_uid",
       "description": "A unique identifer for a container deployment",
@@ -356,8 +341,8 @@
       "type": "integer_t"
     },
     "requested_version_uid": {
+      "caption": "Requested Version UID",
       "description": "For negotiation, the version request for HTTP",
-      "requirement": "optional",
       "type": "string_t"
     },
     "requester_id": {
@@ -485,19 +470,19 @@
       "type": "integer_t"
     },
     "turn_around_time": {
+      "caption": "Turn Around Time",
       "description": "The number of milliseconds that Amazon S3 spent processing your request. This value is measured from the time the last byte of your request was received until the time the first byte of the response was sent.",
-      "requirement": "required",
       "type": "long_t"
     },
     "update_time": {
-      "description": "The time when the instance was update",
-      "requirement": "optional",
+      "caption": "Update Time",
+      "description": "The time when the instance was updated.",
       "type": "timestamp_t"
     },
     "url_path": {
       "caption": "URL Path",
       "description": "The URL path as extracted from the URL. For example: <code>/download/trouble</code>.",
-      "type": "path_t"
+      "type": "string_t"
     },
     "use_case": {
       "caption": "Use case identifier",
