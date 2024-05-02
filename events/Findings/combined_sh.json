@@ -6,9 +6,17 @@
     "name": "combined_sh",
     "category": "dev",
     "attributes": {
-        "vulnerabilities":{},
-        "resource":{},
-        "remediation":{},
-        "compliance":{}
+        "vulnerabilities":{
+            "requirement": "optional"
+        },
+        "resource":{
+            "requirement": "optional"
+        },
+        "remediation":{
+            "requirement": "optional"
+        },
+        "compliance":{
+            "requirement": "optional"
+        }
     }
 }
