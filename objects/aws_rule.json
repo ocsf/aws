@@ -1,6 +1,6 @@
 {
-  "description": "The rule object associated with a policy or event.",
   "caption": "Rule",
+  "description": "The rule object associated with a policy or event.",
   "name": "aws_rule",
   "attributes": {
     "category": {
@@ -9,10 +9,6 @@
     },
     "desc": {
       "description": "The description of the rule that generated the event.",
-      "requirement": "optional"
-    },
-    "rule_details": {
-      "description": "",
       "requirement": "optional"
     },
     "excluded": {
@@ -39,6 +35,10 @@
     "name": {
       "description": "The name of the rule that generated the event.",
       "requirement": "required"
+    },
+    "rule_details": {
+      "description": "",
+      "requirement": "optional"
     },
     "type": {
       "description": "The rule type.",

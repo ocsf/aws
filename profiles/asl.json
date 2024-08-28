@@ -1,0 +1,24 @@
+{
+  "caption": "Amazon Security Lake",
+  "description": "The attributes that describe information specific to Amazon Security Lake.",
+  "meta": "profile",
+  "name": "asl",
+  "attributes": {
+    "accountid": {
+      "caption": "Amazon Security Lake - AWS Account ID",
+      "group": "context",
+      "requirement": "optional"
+    },
+    "asl_version": {
+      "caption": "Amazon Security Lake Version",
+      "group": "context",
+      "requirement": "optional"
+    },
+    "region": {
+      "caption": "Amazon Security Lake - AWS Region",
+      "description": "The AWS region that is used as a partition in the Amazon Security Lake instance..",
+      "group": "context",
+      "requirement": "optional"
+    }
+  }
+}

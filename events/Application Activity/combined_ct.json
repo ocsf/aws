@@ -1,11 +1,15 @@
 {
     "uid": 99,
+    "caption": "Placeholder CT",
+    "category": "dev",
     "description": "A combination class used for CT.",
     "extends": "base_event",
-    "caption": "Placeholder CT",
     "name": "combined_ct",
-    "category": "dev",
     "attributes": {
+        "actor": {
+            "group": "primary",
+            "requirement": "required"
+        },
         "api": {
             "group": "primary",
             "requirement": "required",
@@ -19,10 +23,6 @@
             "description": "Details about the underlying http request.",
             "group": "primary",
             "requirement": "optional"
-        },
-        "actor": {
-            "group": "primary",
-            "requirement": "required"
         },
         "is_mfa": {
             "group": "primary",

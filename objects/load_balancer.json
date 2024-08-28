@@ -1,6 +1,6 @@
 {
-  "description": "Indicates a request and response is being serviced by a load balancer",
   "caption": "Load Balancer",
+  "description": "Indicates a request and response is being serviced by a load balancer",
   "name": "load_balancer",
   "attributes": {
     "error_message": {

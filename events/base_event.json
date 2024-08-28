@@ -5,19 +5,11 @@
   "extends": "base_event",
   "name": "base_event",
   "attributes": {
-    "accountid": {
-      "group": "context",
-      "requirement": "optional"
-    },
-    "asl_version": {
-      "group": "context",
-      "requirement": "optional"
-    },
-    "region": {
-      "caption": "Amazon Security Lake - AWS Region",
-      "description": "The AWS region that is used as a partition in the Amazon Security Lake instance..",
-      "group": "context",
-      "requirement": "optional"
-    }
-  }
+    "$include": [
+      "profiles/asl.json"
+    ]
+  },
+  "profiles": [
+    "aws/asl"
+  ]
 }

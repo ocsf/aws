@@ -13,7 +13,8 @@
     "last_status": {
       "requirement": "optional"
     },
-    "update_time": {
+    "modified_time": {
+      "description": "The timestamp at which the container was last udpated.",
       "requirement": "optional"
     },
     "group": {

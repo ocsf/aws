@@ -1,11 +1,14 @@
 {
     "uid": 10,
+    "caption": "Container Control Plane",
     "category": "dev",
     "description": "Container Control Plane Activity (e.g. EKS Audit Logs)",
     "extends": "base_event",
-    "caption": "Container Control Plane",
     "name": "container_control_plane",
     "attributes": {
+        "actor": {
+            "requirement": "required"
+        },
         "api": {
             "requirement": "required"
         },
@@ -16,9 +19,6 @@
             "requirement": "optional"
         },
         "http_response": {
-            "requirement": "required"
-        },
-        "actor": {
             "requirement": "required"
         },
         "kubernetes": {
