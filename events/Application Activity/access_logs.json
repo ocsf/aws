@@ -1,56 +1,56 @@
 {
   "uid": 2,
+  "caption": "Access Logs",
   "category": "dev",
   "description": "A general purpose schema for varied Access Logs",
   "extends": "base_event",
-  "caption": "Access Logs",
   "name": "access_logs",
   "attributes": {
+    "actor": {
+      "group": "context",
+      "requirement": "optional"
+    },
     "authentication_type": {
       "requirement": "optional"
     },
     "cache_response": {
       "requirement": "optional"
     },
-    "device": {
-      "requirement": "optional",
-      "group": "context"
-    },
     "certificate": {
-      "requirement": "optional",
-      "group": "context"
+      "group": "context",
+      "requirement": "optional"
+    },
+    "databucket": {
+      "group": "context",
+      "requirement": "optional"
+    },
+    "device": {
+      "group": "context",
+      "requirement": "optional"
     },
     "http_cookies": {
-      "requirement": "optional",
-      "group": "context"
+      "group": "context",
+      "requirement": "optional"
     },
     "http_request": {
-      "requirement": "required",
-      "group": "primary"
+      "group": "primary",
+      "requirement": "required"
     },
     "http_response": {
-      "requirement": "required",
-      "group": "primary"
-    },
-    "actor": {
-      "requirement": "optional",
-      "group": "context"
+      "group": "primary",
+      "requirement": "required"
     },
     "integration": {
-      "requirement": "optional",
-      "group": "context"
+      "group": "context",
+      "requirement": "optional"
     },
     "load_balancer": {
-      "requirement": "optional",
-      "group": "context"
+      "group": "context",
+      "requirement": "optional"
     },
     "network_traffic": {
-      "requirement": "optional",
-      "group": "context"
-    },
-    "data_bucket": {
-      "requirement": "optional",
-      "group": "context"
+      "group": "context",
+      "requirement": "optional"
     },
     "owner": {
       "description": "The canonical user ID(alternate AWS account id) of the owner of the source bucket.",
@@ -65,12 +65,12 @@
       "requirement": "optional"
     },
     "src_endpoint": {
-      "requirement": "required",
-      "group": "primary"
+      "group": "primary",
+      "requirement": "required"
     },
     "tls": {
-      "requirement": "optional",
-      "group": "context"
+      "group": "context",
+      "requirement": "optional"
     }
   }
 }

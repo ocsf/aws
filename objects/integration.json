@@ -1,6 +1,6 @@
 {
-  "description": "The Integration Object describes the values of the integration of two or more services, realtionships/associations between 2 or more resources",
   "caption": "integration",
+  "description": "The Integration Object describes the values of the integration of two or more services, realtionships/associations between 2 or more resources",
   "name": "integration",
   "attributes": {
     "latency": {

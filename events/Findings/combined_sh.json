@@ -1,21 +1,21 @@
 {
     "uid": 98,
+    "caption": "Placeholder SH",
+    "category": "dev",
     "description": "A combination class used for SH.",
     "extends": "detection_finding",
-    "caption": "Placeholder SH",
     "name": "combined_sh",
-    "category": "dev",
     "attributes": {
-        "vulnerabilities":{
+        "compliance": {
             "requirement": "optional"
         },
-        "resource":{
+        "remediation": {
             "requirement": "optional"
         },
-        "remediation":{
+        "resource": {
             "requirement": "optional"
         },
-        "compliance":{
+        "vulnerabilities": {
             "requirement": "optional"
         }
     }

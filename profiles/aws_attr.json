@@ -1,0 +1,8 @@
+{
+  "caption": "AWS Attributes",
+  "description": "This profile is used to embellish the framework with AWS specific attributes.",
+  "meta": "profile",
+  "name": "aws_attr",
+  "attributes": {
+  }
+}

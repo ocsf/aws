@@ -1,12 +1,12 @@
 {
   "caption": "AWS Categories",
-  "name": "category",
   "description": "The AWS event categories.",
+  "name": "category",
   "attributes": {
     "dev": {
+      "uid": 98,
       "caption": "Development",
-      "description": "In dev classes",
-      "uid": 98
+      "description": "In dev classes"
     }
   }
 }

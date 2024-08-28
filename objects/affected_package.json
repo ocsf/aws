@@ -1,0 +1,18 @@
+{
+  "caption": "Affected Software Package",
+  "description": "The Affected Package object describes details about a software package identified as affected by a vulnerability/vulnerabilities.",
+  "extends": "affected_package",
+  "name": "affected_package",
+  "attributes": {
+    "$include": [
+      "profiles/aws_attr.json"
+    ],
+    "test": {
+      "profile": "aws/aws_attr",
+      "requirement": "optional"
+    }
+  },
+  "profiles": [
+    "aws/aws_attr"
+  ]
+}

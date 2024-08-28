@@ -1,10 +1,10 @@
 {
     "uid": 9,
+    "caption": "Config",
     "category": "discovery",
     "description": "Configuration & Inventory Data",
     "extends": "base_event",
-    "caption": "Config",
-    "name": "config",
+    "name": "config_data",
     "attributes": {
         "configuration": {
             "requirement": "required"

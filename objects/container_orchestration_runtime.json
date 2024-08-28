@@ -16,7 +16,7 @@
     "task_uid": {
       "requirement": "optional"
     },
-    "hostname_uid": {
+    "hostname": {
       "requirement": "optional"
     },
     "overrides": {

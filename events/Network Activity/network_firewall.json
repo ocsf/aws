@@ -1,9 +1,9 @@
 {
   "uid": 14,
+  "caption": "Network Firewall",
   "category": "network",
   "description": "A general purpose Network Firewall class",
   "extends": "base_event",
-  "caption": "Network Firewall",
   "name": "network_firewall",
   "attributes": {
     "action": {

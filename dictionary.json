@@ -6,11 +6,6 @@
     "accountid": {
       "caption": "Amazon Security Lake - AWS Account ID",
       "description": "The AWS Account ID that is used as a partition in the Amazon Security Lake instance.",
-      "type": "string_t"      
-    },
-    "action": {
-      "caption": "Action",
-      "description": "The resultant action carried out in an event, e.g. allowed, blocked for network flows.",
       "type": "string_t"
     },
     "agreed_protocol_version": {
@@ -21,13 +16,13 @@
     "alternate_rules": {
       "caption": "alternate_rules",
       "description": "Alternate applicable rules",
-      "is_array": true,
-      "type": "aws_rule"
+      "type": "aws_rule",
+      "is_array": true
     },
     "asl_version": {
       "caption": "Amazon Security Lake Version",
       "description": "The version of Amazon Security Lake instance.",
-      "type": "string_t"      
+      "type": "string_t"
     },
     "authentication_type": {
       "caption": "Authentication Type",
@@ -43,11 +38,6 @@
       "caption": "Cache Response",
       "description": "Server classification of the response, e.g. in case of CloudFront logs - Hit, Miss",
       "type": "string_t"
-    },
-    "certificate": {
-      "caption": "Certficate",
-      "description": "TLS/SSL Certificate Information",
-      "type": "certificate"
     },
     "cluster_name": {
       "caption": "Cluster Name",
@@ -119,20 +109,10 @@
       "description": "The unique identifer to describe a group of rules",
       "type": "string_t"
     },
-    "hostname_uid": {
-      "caption": "hostname_uid",
-      "description": "A unique identifer to recognize the endpoint where a WAF request originated.",
-      "type": "string_t"
-    },
     "integration": {
       "caption": "Integration",
       "description": "Integration Object describes the values of the integration of two or more services, relationships/associations between 2 or more resources",
       "type": "integration"
-    },
-    "issuer_dn": {
-      "caption": "Issuer DN",
-      "description": "Issuer Disinguished name (DN) of a digital certificate",
-      "type": "string_t"
     },
     "kubernetes": {
       "caption": "kubernetes",
@@ -147,6 +127,7 @@
     "lb_actions": {
       "caption": "Load Balancer Actions",
       "description": "The actions performed by the load balancer",
+      "type": "string_t",
       "enum": {
         "authenticate": {
           "caption": "AUTHENTICATE",
@@ -172,8 +153,7 @@
           "caption": "WAF-FAILED",
           "description": "The load balancer attempted to forward the request to AWS WAF, but this process failed."
         }
-      },
-      "type": "string_t"
+      }
     },
     "level": {
       "caption": "Level",
@@ -235,21 +215,6 @@
       "description": "The Name of the Node inside the Kubernetes cluster",
       "type": "string_t"
     },
-    "not_after": {
-      "caption": "Not After",
-      "description": "The maximum TLS certificate's validty period",
-      "type": "string_t"
-    },
-    "not_before": {
-      "caption": "Not Before",
-      "description": "The minimum TLS certificate's validty period",
-      "type": "string_t"
-    },
-    "data_bucket": {
-      "caption":"Data Bucket",
-      "description": "Data Bucket descriptors, e.g. Details about AWS S3 buckets.",
-      "type": "data_bucket"
-    },
     "orchestration": {
       "caption": "Container Orchestration",
       "description": "An object to describe the orchestration of a container task",
@@ -264,11 +229,6 @@
       "caption": "Request Parameters",
       "description": "The parameters sent with an API request",
       "type": "json_t"
-    },
-    "pem": {
-      "caption": "PEM",
-      "description": "An identifier for an associated PEM format for certificates",
-      "type": "string_t"
     },
     "pod_ip": {
       "caption": "Pod IP",
@@ -288,16 +248,6 @@
     "pod_uid": {
       "caption": "Pod ID",
       "description": "The unique ID of the pod inside the Kubernetes cluster",
-      "type": "string_t"
-    },
-    "query_body": {
-      "caption": "Query Body",
-      "description": "The body of the query that runs against the database",
-      "type": "string_t"
-    },
-    "query_uid": {
-      "caption": "Query UID",
-      "description": "The unique identifier for a database query",
       "type": "string_t"
     },
     "redirect_url": {
@@ -370,11 +320,6 @@
       "description": "For negotiation, the protocol offered by the server",
       "type": "string_t"
     },
-    "severity_score": {
-      "caption": "Severity Score",
-      "description": "The severity score of a finding",
-      "type": "string_t"
-    },
     "signature_version": {
       "caption": "Signature version",
       "description": "The AWS signature version used for Authentication",
@@ -395,11 +340,6 @@
       "description": "Subject Disinguished name (DN) of a digital certificate",
       "type": "string_t"
     },
-    "table": {
-      "caption": "Table",
-      "description": "The database TABLE in use for the operation",
-      "type": "string_t"
-    },
     "target_group_uid": {
       "caption": "Target Group UID",
       "description": "A unique identifier to recognize the target for a load balancer connection",
@@ -418,8 +358,8 @@
     "target_status_code_list": {
       "caption": "target_status_code_list",
       "description": "A space-delimited list of status codes from the responses of the targets, enclosed in double quotes. Currently, this list can contain one item and it matches the target_status_code field.",
-      "is_array": true,
-      "type": "integer_t"
+      "type": "integer_t",
+      "is_array": true
     },
     "task_uid": {
       "caption": "Task UID",
@@ -431,14 +371,16 @@
       "description": "The rule responsibile for termination",
       "type": "aws_rule"
     },
+    "test": {
+      "caption": "test",
+      "description": "A test attribute",
+      "type": "string_t"
+    },
     "tls_client_protocol": {
       "caption": "TLS Client Protocol",
       "description": "The application protocol negotiated with the client, in string format. The possible values are h2, http/1.1, and http/1.0. If no ALPN policy is configured in the TLS listener, no matching protocol is found, or no valid protocol list is sent, this value is set to -.",
+      "type": "string_t",
       "enum": {
-        "NOT_SET": {
-          "caption": "NOT_SET",
-          "description": ""
-        },
         "h2": {
           "caption": "h2",
           "description": ""
@@ -450,9 +392,12 @@
         "http/1.1": {
           "caption": "http/1.1",
           "description": ""
+        },
+        "NOT_SET": {
+          "caption": "NOT_SET",
+          "description": ""
         }
-      },
-      "type": "string_t"
+      }
     },
     "tls_listener_uid": {
       "caption": "TLS Listener UID",
@@ -473,16 +418,6 @@
       "caption": "Turn Around Time",
       "description": "The number of milliseconds that Amazon S3 spent processing your request. This value is measured from the time the last byte of your request was received until the time the first byte of the response was sent.",
       "type": "long_t"
-    },
-    "update_time": {
-      "caption": "Update Time",
-      "description": "The time when the instance was updated.",
-      "type": "timestamp_t"
-    },
-    "url_path": {
-      "caption": "URL Path",
-      "description": "The URL path as extracted from the URL. For example: <code>/download/trouble</code>.",
-      "type": "string_t"
     },
     "use_case": {
       "caption": "Use case identifier",
