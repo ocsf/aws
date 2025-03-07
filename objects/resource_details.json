@@ -1,0 +1,407 @@
+{
+  "caption": "Resource Details",
+  "description": "The Resource Details object describes details about resources that were affected by the activity/event.",
+  "extends": "resource_details",
+  "name": "resource_details",
+  "attributes": {
+    "type_id": {
+      "caption": "AWS Resource",
+      "description": "The normalized type identifier of an AWS Service.",
+      "requirement": "optional",
+      "enum": {
+        "1": {
+          "caption": "AWS::SecurityHub::Standard",
+          "description": "A collection of security controls that helps you assess your security posture and compliance with industry standards and best practices."
+        },
+        "2": {
+          "caption": "AWS::AmazonMQ::Broker",
+          "description": "A fully managed message broker service for Apache ActiveMQ and RabbitMQ that facilitates message communication between applications."
+        },
+        "3": {
+          "caption": "AWS::ApiGateway::RestApi",
+          "description": "A collection of HTTP resources and methods that compose a RESTful API interface for backend services."
+        },
+        "4": {
+          "caption": "AWS::ApiGateway::Stage",
+          "description": "A deployment stage for an API Gateway REST API that provides a unique URL and settings for accessing the API."
+        },
+        "5": {
+          "caption": "AWS::ApiGateway::V2Api",
+          "description": "An API Gateway resource that supports WebSocket and HTTP APIs with improved performance and advanced features."
+        },
+        "6": {
+          "caption": "AWS::ApiGateway::V2Stage",
+          "description": "A deployment stage for an API Gateway V2 API (WebSocket or HTTP API) that provides a unique URL and settings."
+        },
+        "7": {
+          "caption": "AWS::AppSync::GraphQLApi",
+          "description": "A fully managed GraphQL service for building APIs that connect applications to data sources with real-time data synchronization."
+        },
+        "8": {
+          "caption": "AWS::Athena::WorkGroup",
+          "description": "An Amazon Athena resource that allows organizing queries and controlling query access and costs within a group."
+        },
+        "9": {
+          "caption": "AWS::AutoScaling::AutoScalingGroup",
+          "description": "A collection of EC2 instances that automatically scales based on specified policies to maintain application availability."
+        },
+        "10": {
+          "caption": "AWS::AutoScaling::LaunchConfiguration",
+          "description": "A template that specifies the configuration settings for EC2 instances launched by an Auto Scaling group."
+        },
+        "11": {
+          "caption": "AWS::Backup::BackupPlan",
+          "description": "A policy expression that defines when and how to back up AWS resources, including frequency and retention periods."
+        },
+        "12": {
+          "caption": "AWS::Backup::BackupVault",
+          "description": "A secure and encrypted storage container for backup data with customizable access policies and lifecycle management."
+        },
+        "13": {
+          "caption": "AWS::Backup::RecoveryPoint",
+          "description": "A point-in-time backup snapshot of an AWS resource that can be used to restore data to a specific state."
+        },
+        "14": {
+          "caption": "AWS::CertificateManager::Certificate",
+          "description": "A public SSL/TLS certificate that secures communications between clients and AWS services or applications."
+        },
+        "15": {
+          "caption": "AWS::CloudFormation::Stack",
+          "description": "A collection of AWS resources created and managed as a single unit using infrastructure as code templates."
+        },
+        "16": {
+          "caption": "AWS::CloudFront::Distribution",
+          "description": "A global content delivery network service that securely delivers data, videos, applications, and APIs with low latency."
+        },
+        "17": {
+          "caption": "AWS::CloudTrail::Trail",
+          "description": "A configuration that enables logging of AWS account activity for governance, compliance, and security auditing."
+        },
+        "18": {
+          "caption": "AWS::CloudWatch::Alarm",
+          "description": "A monitoring configuration that watches metrics and triggers actions when thresholds are breached for operational visibility."
+        },
+        "19": {
+          "caption": "AWS::CodeBuild::Project",
+          "description": "A fully managed continuous integration service that compiles source code, runs tests, and produces ready-to-deploy software packages."
+        },
+        "20": {
+          "caption": "AWS::DMS::Endpoint",
+          "description": "A connection point for a source or target database in the Database Migration Service that specifies connection details and credentials."
+        },
+        "21": {
+          "caption": "AWS::DMS::ReplicationInstance",
+          "description": "A managed compute instance that performs the data migration process between source and target databases."
+        },
+        "22": {
+          "caption": "AWS::DMS::ReplicationTask",
+          "description": "A configuration that manages how data is moved between source and target endpoints, including table mappings and transformations."
+        },
+        "23": {
+          "caption": "AWS::DynamoDB::Table",
+          "description": "A fully managed NoSQL database table that provides fast, predictable performance with seamless scalability."
+        },
+        "24": {
+          "caption": "AWS::EC2::ClientVpnEndpoint",
+          "description": "A managed client VPN service that securely connects remote users and offices to AWS or on-premises networks."
+        },
+        "25": {
+          "caption": "AWS::EC2::Eip",
+          "description": "A static IPv4 address designed for dynamic cloud computing that can be associated with EC2 instances or network interfaces."
+        },
+        "26": {
+          "caption": "AWS::EC2::Instance",
+          "description": "A virtual server in the AWS cloud that provides configurable compute capacity for running applications."
+        },
+        "27": {
+          "caption": "AWS::EC2::LaunchTemplate",
+          "description": "A configuration template that specifies instance settings for EC2 instance launches, enabling consistent deployment."
+        },
+        "28": {
+          "caption": "AWS::EC2::NetworkAcl",
+          "description": "A stateless network traffic filter that controls inbound and outbound traffic at the subnet level for added security."
+        },
+        "29": {
+          "caption": "AWS::EC2::NetworkInterface",
+          "description": "A logical networking component that connects an EC2 instance to a VPC network with configurable attributes."
+        },
+        "30": {
+          "caption": "AWS::EC2::RouteTable",
+          "description": "A set of routing rules that determine where network traffic from subnets or gateway is directed."
+        },
+        "31": {
+          "caption": "AWS::EC2::SecurityGroup",
+          "description": "A virtual firewall that controls inbound and outbound traffic to AWS resources based on defined rules."
+        },
+        "32": {
+          "caption": "AWS::EC2::Subnet",
+          "description": "A range of IP addresses within a VPC that allows organizing resources into separate network segments."
+        },
+        "33": {
+          "caption": "AWS::EC2::TransitGateway",
+          "description": "A network transit hub that connects VPCs and on-premises networks through a central connection point."
+        },
+        "34": {
+          "caption": "AWS::EC2::Volume",
+          "description": "A persistent block storage volume for EC2 instances that persists independently from the instance lifecycle."
+        },
+        "35": {
+          "caption": "AWS::EC2::Vpc",
+          "description": "A logically isolated virtual network in AWS that provides complete control over the networking environment."
+        },
+        "36": {
+          "caption": "AWS::EC2::VpcEndpointService",
+          "description": "A service that enables creating private connections between VPCs and supported AWS services without using public IPs."
+        },
+        "37": {
+          "caption": "AWS::EC2::VpcPeeringConnection",
+          "description": "A networking connection between two VPCs that enables routing traffic between them using private IP addresses."
+        },
+        "38": {
+          "caption": "AWS::ECR::ContainerImage",
+          "description": "A stored Docker container image in Amazon Elastic Container Registry that can be deployed to container services."
+        },
+        "39": {
+          "caption": "AWS::ECR::Repository",
+          "description": "A private registry to store, manage, and deploy Docker container images with fine-grained access controls."
+        },
+        "40": {
+          "caption": "AWS::ECS::Cluster",
+          "description": "A logical grouping of container instances that run containerized applications with orchestration capabilities."
+        },
+        "41": {
+          "caption": "AWS::ECS::Container",
+          "description": "An isolated application environment within a task that runs a specific Docker image with defined resource limits."
+        },
+        "42": {
+          "caption": "AWS::ECS::Service",
+          "description": "A configuration that maintains and scales a specified number of task instances for a defined ECS task definition."
+        },
+        "43": {
+          "caption": "AWS::ECS::Task",
+          "description": "A running instance of a task definition that represents an application composed of one or more containers."
+        },
+        "44": {
+          "caption": "AWS::ECS::TaskDefinition",
+          "description": "A blueprint that describes the container(s) that form an application, including resource requirements and launch configurations."
+        },
+        "45": {
+          "caption": "AWS::EFS::AccessPoint",
+          "description": "An application-specific entry point for Amazon EFS file systems that enforces user identity and directory permissions."
+        },
+        "46": {
+          "caption": "AWS::EKS::Cluster",
+          "description": "A managed Kubernetes service that makes it easy to run Kubernetes on AWS without managing the control plane."
+        },
+        "47": {
+          "caption": "AWS::ElasticBeanstalk::Environment",
+          "description": "A collection of AWS resources running an application version deployed with infrastructure that's provisioned automatically."
+        },
+        "48": {
+          "caption": "AWS::ElasticSearch::Domain",
+          "description": "A deployment of Elasticsearch with the hardware, software, and data that constitute an Elasticsearch cluster."
+        },
+        "49": {
+          "caption": "AWS::ELB::LoadBalancer",
+          "description": "A Classic Load Balancer that distributes incoming application traffic across multiple EC2 instances for high availability."
+        },
+        "50": {
+          "caption": "AWS::ELBv2::LoadBalancer",
+          "description": "An Application or Network Load Balancer that provides advanced routing features and improved performance over Classic Load Balancers."
+        },
+        "51": {
+          "caption": "AWS::EventSchemas::Registry",
+          "description": "A container for event schemas that manages and organizes schemas for event-driven applications."
+        },
+        "52": {
+          "caption": "AWS::Events::Endpoint",
+          "description": "A connection point for routing EventBridge events between AWS accounts, regions, or to partner event sources."
+        },
+        "53": {
+          "caption": "AWS::Events::Eventbus",
+          "description": "A router for event-driven applications that receives events and delivers them to targets based on rules."
+        },
+        "54": {
+          "caption": "AWS::GuardDuty::Detector",
+          "description": "A monitoring service that analyzes logs and network activity to detect threats and unusual behavior in AWS environments."
+        },
+        "55": {
+          "caption": "AWS::IAM::AccessKey",
+          "description": "A set of security credentials consisting of an access key ID and secret key used to sign programmatic requests to AWS."
+        },
+        "56": {
+          "caption": "AWS::IAM::Group",
+          "description": "A collection of IAM users that allows applying permissions to multiple users simultaneously for easier management."
+        },
+        "57": {
+          "caption": "AWS::IAM::Policy",
+          "description": "A document that defines permissions and specifies what actions are allowed on which AWS resources under specific conditions."
+        },
+        "58": {
+          "caption": "AWS::IAM::Role",
+          "description": "An identity with permission policies that determine what actions an entity can perform in AWS services."
+        },
+        "59": {
+          "caption": "AWS::IAM::User",
+          "description": "An identity representing a person or application that can authenticate and be authorized to use AWS services."
+        },
+        "60": {
+          "caption": "AWS::Kinesis::Stream",
+          "description": "A service for real-time data streaming that continuously captures gigabytes of data per second from thousands of sources."
+        },
+        "61": {
+          "caption": "AWS::KMS::Key",
+          "description": "A logical representation of a cryptographic key used for encrypting and decrypting data with strong access controls."
+        },
+        "62": {
+          "caption": "AWS::Lambda::Function",
+          "description": "A serverless compute service that runs code in response to events without provisioning or managing servers."
+        },
+        "63": {
+          "caption": "AWS::Lambda::LayerVersion",
+          "description": "A distribution package that contains libraries, custom runtimes, or dependencies shared across multiple Lambda functions."
+        },
+        "64": {
+          "caption": "AWS::MSK::Cluster",
+          "description": "A fully managed Apache Kafka service that makes it easy to build and run applications that use Kafka for stream processing."
+        },
+        "65": {
+          "caption": "AWS::NetworkFirewall::Firewall",
+          "description": "A stateful, managed network firewall service for VPCs that inspects traffic at the packet level for enhanced security."
+        },
+        "66": {
+          "caption": "AWS::NetworkFirewall::FirewallPolicy",
+          "description": "A set of rule groups and default actions that define how a Network Firewall processes network traffic."
+        },
+        "67": {
+          "caption": "AWS::NetworkFirewall::RuleGroup",
+          "description": "A reusable collection of network traffic filtering rules that can be referenced by multiple firewall policies."
+        },
+        "68": {
+          "caption": "AWS::OpenSearchService::Domain",
+          "description": "A deployment of OpenSearch that provides a search and analytics engine for log analytics, real-time application monitoring, and website search."
+        },
+        "69": {
+          "caption": "AWS::RDS::DbCluster",
+          "description": "A group of database instances in Amazon Aurora that share a distributed storage volume for high availability."
+        },
+        "70": {
+          "caption": "AWS::RDS::DbClusterSnapshot",
+          "description": "A point-in-time backup of an entire RDS database cluster that can be used to restore to a specific state."
+        },
+        "71": {
+          "caption": "AWS::RDS::DbInstance",
+          "description": "A managed database instance in the cloud with automated administration tasks such as backups and patching."
+        },
+        "72": {
+          "caption": "AWS::RDS::DbSecurityGroup",
+          "description": "A legacy security mechanism for controlling network access to RDS database instances in EC2-Classic."
+        },
+        "73": {
+          "caption": "AWS::RDS::DbSnapshot",
+          "description": "A point-in-time backup of a single RDS database instance that can be used to restore or create new instances."
+        },
+        "74": {
+          "caption": "AWS::RDS::EventSubscription",
+          "description": "A notification configuration that delivers RDS instance events to SNS topics for monitoring database changes and issues."
+        },
+        "75": {
+          "caption": "AWS::Redshift::Cluster",
+          "description": "A fully managed, petabyte-scale data warehouse service for analyzing structured data across data sources."
+        },
+        "76": {
+          "caption": "AWS::Route53::HostedZone",
+          "description": "A container for DNS records that defines how traffic is routed for a domain and its subdomains."
+        },
+        "77": {
+          "caption": "AWS::S3::AccessPoint",
+          "description": "A dedicated access point for S3 buckets with specific permissions to simplify managing data access at scale."
+        },
+        "78": {
+          "caption": "AWS::S3::AccountPublicAccessBlock",
+          "description": "An account-level setting that centrally controls public access permissions for all S3 buckets in an AWS account."
+        },
+        "79": {
+          "caption": "AWS::S3::Bucket",
+          "description": "A cloud storage container for objects that provides durability, availability, and security for data storage."
+        },
+        "80": {
+          "caption": "AWS::S3::Object",
+          "description": "A fundamental entity stored in Amazon S3 that consists of data, metadata, and a key that uniquely identifies it."
+        },
+        "81": {
+          "caption": "AWS::SageMaker::NotebookInstance",
+          "description": "A fully managed machine learning compute instance running Jupyter notebooks for data exploration and model development."
+        },
+        "82": {
+          "caption": "AWS::SecretsManager::Secret",
+          "description": "A secure, encrypted storage service for sensitive information like passwords, API keys, and database credentials."
+        },
+        "83": {
+          "caption": "AWS::SNS::Topic",
+          "description": "A communication channel for publishing messages to subscribing endpoints or clients for event notifications."
+        },
+        "84": {
+          "caption": "AWS::SQS::Queue",
+          "description": "A fully managed message queuing service for decoupling and scaling microservices and distributed systems."
+        },
+        "85": {
+          "caption": "AWS::SSM::PatchCompliance",
+          "description": "A status report for patch compliance that indicates if managed instances are properly patched for security vulnerabilities."
+        },
+        "86": {
+          "caption": "AWS::StepFunctions::StateMachine",
+          "description": "A serverless workflow service that coordinates multiple AWS services into structured, visual workflows for applications."
+        },
+        "87": {
+          "caption": "AWS::WAF::RateBasedRule",
+          "description": "A Web Application Firewall rule that blocks requests based on the rate at which they arrive from individual IP addresses."
+        },
+        "88": {
+          "caption": "AWS::WAFRegional::RateBasedRule",
+          "description": "A regional WAF rule that limits requests based on volume from IP addresses to protect against DDoS attacks."
+        },
+        "89": {
+          "caption": "AWS::WAFRegional::Rule",
+          "description": "A Regional WAF security rule that filters web requests based on conditions like IP addresses or query strings."
+        },
+        "90": {
+          "caption": "AWS::WAFRegional::RuleGroup",
+          "description": "A collection of Regional WAF rules that can be reused and applied together in web access control lists."
+        },
+        "91": {
+          "caption": "AWS::WAFRegional::WebAcl",
+          "description": "A Regional WAF access control list that controls which web requests are allowed or blocked based on defined rules."
+        },
+        "92": {
+          "caption": "AWS::WAF::Rule",
+          "description": "A global WAF rule that specifies conditions to match and actions to take on matching web requests."
+        },
+        "93": {
+          "caption": "AWS::WAF::RuleGroup",
+          "description": "A reusable set of global WAF rules that can be shared and applied across multiple WebACLs for consistent security."
+        },
+        "94": {
+          "caption": "AWS::WAFv2::RuleGroup",
+          "description": "A next-generation WAF rule collection with enhanced capabilities for inspecting web requests with improved performance."
+        },
+        "95": {
+          "caption": "AWS::WAF::WebAcl",
+          "description": "A global WAF access control list that monitors and controls access to web applications by filtering traffic."
+        },
+        "96": {
+          "caption": "AWS::WAFv2::WebAcl",
+          "description": "An improved version of WebACL with advanced rule capabilities and better traffic visibility for application security."
+        },
+        "97": {
+          "caption": "AWS::XRay::EncryptionConfig",
+          "description": "A configuration for encrypting trace data using AWS Key Management Service (KMS) in AWS X-Ray."
+        },
+        "98": {
+          "caption": "Container",
+          "description": "A lightweight, standalone executable package that includes everything needed to run a piece of software."
+        }
+      }
+    }
+  }
+}
