@@ -1,0 +1,23 @@
+{
+  "description": "A range of IP addresses within a VPC that allows organizing resources into separate network segments.",
+  "caption": "A range of IP addresses",
+  "name": "aws_ec2_securitygroup",
+  "attributes": {
+    "uid": {
+      "description": "GroupId",
+      "requirement": "required"
+    },
+    "name": {
+      "description": "GroupName",
+      "requirement": "optional"
+    },
+    "owner": {
+      "description": "OwnerId",
+      "requirement": "recommended"
+    },
+    "vpc_uid": {
+      "description": "VpcId",
+      "requirement": "required"
+    }
+  }
+}

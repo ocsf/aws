@@ -5,9 +5,9 @@
   "name": "resource_details",
   "attributes": {
     "type_id": {
-      "caption": "AWS Resource",
-      "description": "The normalized type identifier of an AWS Service.",
-      "requirement": "optional",
+      "caption": "AWS Resource Type",
+      "description": "The normalized type identifier of an AWS Resource.",
+      "requirement": "required",
       "enum": {
         "1": {
           "caption": "AWS::SecurityHub::Standard",
@@ -396,10 +396,6 @@
         "97": {
           "caption": "AWS::XRay::EncryptionConfig",
           "description": "A configuration for encrypting trace data using AWS Key Management Service (KMS) in AWS X-Ray."
-        },
-        "98": {
-          "caption": "Container",
-          "description": "A lightweight, standalone executable package that includes everything needed to run a piece of software."
         }
       }
     }

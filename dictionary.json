@@ -3,6 +3,12 @@
   "description": "The Attribute Dictionary defines schema attributes and includes references to the events and objects in which they are used.",
   "name": "dictionary",
   "attributes": {
+    "web_resources": {
+      "caption": "AWS EC2 Security Group",
+      "description": "A range of IP addresses within a VPC that allows organizing resources into separate network segments.",
+      "type": "aws_ec2_securitygroup",
+      "is_array": true
+    },
     "accountid": {
       "caption": "Amazon Security Lake - AWS Account ID",
       "description": "The AWS Account ID that is used as a partition in the Amazon Security Lake instance.",
