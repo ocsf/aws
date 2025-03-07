@@ -1,6 +1,6 @@
 {
   "description": "A range of IP addresses within a VPC that allows organizing resources into separate network segments.",
-  "caption": "A range of IP addresses",
+  "caption": "AWS EC2 Security Group",
   "name": "aws_ec2_securitygroup",
   "attributes": {
     "uid": {
