@@ -13,9 +13,6 @@
       "description": "Name of the resource",
       "requirement": "optional"
     },
-    "relation": {
-      "requirement": "optional"
-    },
     "request_id": {
       "requirement": "optional"
     },
