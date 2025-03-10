@@ -13,12 +13,6 @@
       "description": "Negotiaged and Agreed Upon TLS Protocol Version",
       "type": "string_t"
     },
-    "alternate_rules": {
-      "caption": "alternate_rules",
-      "description": "Alternate applicable rules",
-      "type": "aws_rule",
-      "is_array": true
-    },
     "asl_version": {
       "caption": "Amazon Security Lake Version",
       "description": "The version of Amazon Security Lake instance.",
@@ -28,11 +22,6 @@
       "caption": "Authentication Type",
       "description": "The type of authentication used, e.g. AuthHeader for authentication headers, QueryString for query string (pre-signed URL) or a - for unauthenticated requests.",
       "type": "string_t"
-    },
-    "aws_rule": {
-      "caption": "Rule",
-      "description": "The rule object describes rules associated with a policy or event.",
-      "type": "aws_rule"
     },
     "cache_response": {
       "caption": "Cache Response",
@@ -365,11 +354,6 @@
       "caption": "Task UID",
       "description": "The unique identifier for a task utilized in a container runtime environment",
       "type": "string_t"
-    },
-    "terminating_rule": {
-      "caption": "terminating_rule",
-      "description": "The rule responsibile for termination",
-      "type": "aws_rule"
     },
     "test": {
       "caption": "test",
