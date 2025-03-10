@@ -5,7 +5,7 @@ The AWS schema extension repository
 {
   "caption": "AWS Extension",
   "name": "aws",
-  "version": "1.3.0",
+  "version": "1.5.0-dev",
   "uid": 998
 }
 ```
