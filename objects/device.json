@@ -1,0 +1,23 @@
+{
+  "caption": "Device",
+  "description": "The Device object represents an addressable computer system or host, which is typically connected to a computer network and participates in the transmission or processing of data within the computer network.",
+  "extends": "device",
+  "name": "device",
+  "attributes": {
+    "image": {
+      "requirement": "required"
+    },
+    "instance_profile": {
+      "requirement": "recommended",
+      "description": "The IAM instance profile to associate with the instance."
+    },
+    "launch_time": {
+      "requirement": "recommended",
+      "description": "The time the instance was launched."
+    },
+    "encryption_details": {
+      "description": "The encryption details of resource. See specific usage.",
+      "requirement": "recommended"
+    }
+}
+}

@@ -407,6 +407,22 @@
       "caption": "Use case identifier",
       "description": "The usecase identifier of an entity",
       "type": "string_t"
+    },
+    "instance_profile": {
+      "caption": "Instance Profile ARN",
+      "description": "The ARN of the IAM profile that is attached to an EC2 instance to give permissions to the instance.",
+      "type": "string_t"
+    },
+    "launch_time": {
+      "caption": "Launch Time",
+      "description": "The reported time a device or instance was launched",
+      "type": "timestamp_t"
+    },
+    "ip_addresses": {
+      "caption": "IP Address Array ",
+      "description": "An array of IP addresses (IPv4 or IPv6) associated with the instance. These may include both public and private IP addresses.",
+      "type": "ip_t",
+      "is_array": true
     }
   }
 }
