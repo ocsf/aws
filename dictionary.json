@@ -423,6 +423,120 @@
       "description": "An array of IP addresses (IPv4 or IPv6) associated with the instance. These may include both public and private IP addresses.",
       "type": "ip_t",
       "is_array": true
+    },
+    "handler": {
+      "caption": "Handler",
+      "description": "The method in the cloud function that processes events",
+      "type": "string_t"
+    },
+    "subnet_uids": {
+      "caption": "List of Subnets",
+      "description": "The list of subnets associated with the resource",
+      "type": "string_t",
+      "is_array": true
+    },
+    "security_group_uids": {
+      "caption": "List of Security groups",
+      "description": "The list of security groups associated with the resource",
+      "type": "string_t",
+      "is_array": true
+    },
+    "cidr_block": {
+      "caption": "CIDR Block",
+      "description": "The CIDR block of the subnet",
+      "type": "subnet_t"
+    },
+    "ip_count": {
+      "caption": "IP Count",
+      "description": "The number of IP addresses in the subnet",
+      "type": "integer_t"
+    },
+    "snapshot_id": {
+      "caption": "Snapshot ID",
+      "description": "The storage device snapshot identifier <code>(e.g. snap-1234567890abcdef0).</code>",
+      "type": "string_t"
+    },
+    "subnet_info": {
+      "caption": "Subnet Information",
+      "description": "Describes the supporting information about a subnet.",
+      "type": "subnet_info"
+    },
+    "subnet_info_list": {
+      "caption": "List of Subnet Information",
+      "description": "A list of supporting information about a subnet.",
+      "type": "subnet_info",
+      "is_array": true
+    },
+    "attachments": {
+      "caption": "List of Attachments",
+      "description": "A list of attachments to the resource",
+      "type": "attachment",
+      "is_array": true
+    },
+    "is_delete_on_termination": {
+      "caption": "Is Delete on Termination",
+      "description": "Specifies whether the volume will be deleted on instance termination",
+      "type": "boolean_t"
+    },
+    "attach_time": {
+      "caption": "Attach Time",
+      "description": "The time stamp when the volume was attached to the instance",
+      "type": "timestamp_t"
+    },
+    "storage_device": {
+      "caption": "Storage Device",
+      "description": "The storage device that is attached to the instance",
+      "type": "storage_device"
+    },
+    "cloud_function": {
+      "caption": "Cloud Function",
+      "description": "The cloud function that processes events",
+      "type": "cloud_function"
+    },
+    "db_endpoint": {
+      "caption": "Database Endpoint",
+      "description": "The database endpoint that is associated with the resource",
+      "type": "network_endpoint"
+    },
+    "engine": {
+      "caption": "Engine",
+      "description": "The engine that is associated with the database",
+      "type": "string_t"
+    },
+    "subnet_group": {
+      "caption": "Subnet Group",
+      "description": "The subnet group that is associated with the database",
+      "type": "subnet_group"
+    },
+    "hosted_zone_uid": {
+      "caption": "Hosted Zone UID",
+      "description": "The unique identifier of a hosted zone <code>(e.g. AWS Route 53 Hosted Zone)</code>.",
+      "type": "string_t"
+    },
+    "repository_name": {
+      "caption": "Repository Name",
+      "description": "The name of the repository. See specific usage.",
+      "type": "string_t"
+    },
+    "platform": {
+      "caption": "Platform Name",
+      "description": "The operating system platform of the image. See specific usage.",
+      "type": "string_t"
+    },
+    "in_use_count": {
+      "caption": "In Use Count",
+      "description": "Count of resources using this image. See specific usage.",
+      "type": "integer_t"
+    },
+    "last_usage_time": {
+      "caption": "Last Usage time",
+      "description": "The time stamp when the resource was last used. See specific usage.",
+      "type": "timestamp_t"
+    },
+    "registry_uid": {
+      "caption": "Registry UID",
+      "description": "The unique identifier of a container registry (e.g. AWS ECR Registry ID).",
+      "type": "string_t"
     }
   }
 }

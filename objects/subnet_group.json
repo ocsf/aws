@@ -1,0 +1,29 @@
+{
+  "caption": "Subnet Group",
+  "description": "Details about a subnet.",
+  "extends": "_entity",
+  "name": "subnet_group",
+  "attributes": {
+    "subnet_info_list": {
+      "description": "The list of subnets that belong to the subnet group.",
+      "requirement": "recommended"
+    },
+    "name": {
+      "description": "The name of the subnet group.",
+      "requirement": "required"
+    },
+    "desc": {
+      "description": "The description of the subnet group.",
+      "requirement": "recommended"
+    },
+    "vpc_uid": {
+      "description": "The UID of the VPC that the subnet group belongs to.",
+      "requirement": "recommended"
+    },
+    "state": {
+      "description": "The state of the subnet group.",
+      "requirement": "required"
+    }
+  }
+}
+

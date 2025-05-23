@@ -1,0 +1,37 @@
+{
+  "caption": "Subnet Info",
+  "description": "Details about a subnet.",
+  "extends": "_entity",
+  "name": "subnet_info",
+  "attributes": {
+    "ip_count": {
+      "description": "The number of IP addresses in the subnet.",
+      "requirement": "recommended"
+    },
+    "cidr_block": {
+      "description": "The CIDR block of the subnet.",
+      "requirement": "recommended"
+    },
+    "is_default": {
+      "description": "Indicates whether this is the default subnet for the Availability Zone.",
+      "requirement": "recommended"
+    },
+    "is_public": {
+      "description": "Indicates whether instances launched in this subnet receive a public IP address.",
+      "requirement": "recommended"
+    },
+    "state": {
+      "description": "The current state of the subnet <code>(e.g. avalible)</code>",
+      "requirement": "recommended"
+    },
+    "zone": {
+      "caption": "Avaliblity Zone",
+      "description": "The Availability Zone of the subnet.",
+      "requirement": "recommended"
+    },
+    "vpc_uid": {
+      "description": "The VPC ID of the subnet.",
+      "requirement": "recommended"
+    }
+  }
+}

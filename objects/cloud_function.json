@@ -1,0 +1,40 @@
+{
+  "caption": "Cloud Function",
+  "description": "Cloud Function resource",
+  "extends": "_entity",
+  "name": "cloud_function",
+  "attributes": {
+    "handler": {
+      "requirement": "optional",
+      "description": "The method in the function code that processes events. When invoked, Lambda runs this handler method with event data and context until it returns a response, exits, or times out"
+    },
+    "encryption_details": {
+      "requirement": "recommended",
+      "description": "The cloud function encryption details <code>(e.g. arn:aws:kms:us-west-2:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab)</code>"
+    },
+    "user": {
+      "requirement": "optional",
+      "description": "Details about the IAM entity (user/role) that grants the <code>cloud_function</code> permission to access services and resources."
+    },
+    "runtime": {
+      "requirement": "optional",
+      "description": "The cloud function language-specific environment <code>(e.g. Node.js, Python,Java, Ruby)</code> "
+    },
+    "subnet_uids": {
+      "requirement": "recommended",
+      "description": "The list of subnets associated with the cloud function <code>(e.g. [\"subnet-071f712345678e7c8\", \"subnet-07fd123456788a036\"])</code>"
+    },
+    "security_group_uids": {
+      "requirement": "recommended",
+      "description": "The list of security groups associated with the cloud function <code>(e.g. [\"sg-085912345678492fb\"]</code>"
+    },
+    "vpc_uid": {
+      "requirement": "recommended",
+      "description": "The unique identifier of the Virtual Private Cloud (VPC) if the cloud function is in a VPC"
+    },
+    "version": {
+      "requirement": "optional",
+      "description": "The cloud function version <code>(e.g. 1,2,3,42)</code>."
+    }
+}
+}

@@ -1,0 +1,24 @@
+{
+  "caption": "Attachments to a storage device",
+  "description": "The attachment object contains information about the attachment of a volume to an instance.",
+  "extends": "object",
+  "name": "attachment",
+  "attributes": {
+    "state": {
+      "requirement": "recommended",
+      "description": "The attachment state. <code>(e.g. attached)</code>."
+    },
+    "instance_uid": {
+      "requirement": "required",
+      "description": "The ID of the instance the volume is attached to."
+    },
+    "is_delete_on_termination": {
+      "requirement": "recommended",
+      "description": "Whether the volume should be destroyed on instance termination."
+    },
+    "attach_time": {
+      "requirement": "recommended",
+      "description": "Time the volume was attached to the instance."
+    }
+}
+}

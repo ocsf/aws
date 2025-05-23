@@ -1,0 +1,44 @@
+{
+  "caption": "Container Image",
+  "description": "Image used by a container",
+  "extends": "image",
+  "name": "image",
+  "attributes": {
+    "architecture": {
+      "requirement": "recommended",
+      "description": "The CPU architecture that the image is built for <code>(e.g. x86_64, arm64)</code>."
+    },
+    "hash": {
+      "requirement": "recommended",
+      "description": "The unique hash of the image"
+    },
+    "platform": {
+      "requirement": "recommended",
+      "description": "The operating system platform of the image <code>(e.g. AMAZON_LINUX_2)</code>."
+    },
+    "registry_uid": {
+      "requirement": "recommended",
+      "description": "The unique identifier of the registry where this image is stored"
+    },
+    "last_usage_time": {
+      "requirement": "recommended",
+      "description": "Timestamp of when this image was last used"
+    },
+    "repository_name": {
+      "requirement": "recommended",
+      "description": "Name of the repository containing this image"
+    },
+    "created_time": {
+      "requirement": "recommended",
+      "description": "Timestamp of when this image was created"
+    },
+    "modified_time": {
+      "requirement": "recommended",
+      "description": "Timestamp of when this image was last modified"
+    },
+    "in_use_count": {
+      "requirement": "recommended",
+      "description": "Number of containers using this image"
+    }
+  }
+}
