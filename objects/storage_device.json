@@ -1,0 +1,25 @@
+{
+  "caption": "Storage Device",
+  "description": "Storage Device details",
+  "extends": "_entity",
+  "name": "storage_device",
+  "attributes": {
+    "attachments": {
+      "requirement": "recommended",
+      "description": "The storage device attachments"
+    },
+    "is_encrypted": {
+      "requirement": "required",
+      "description": "Whether the storage device is encrypted <code>(e.g. true)</code>."
+    },
+    "encryption_details": {
+      "requirement": "recommended",
+      "description": "The storage device encryption key, if the resource is encrypted"
+    },
+    "snapshot_id": {
+      "requirement": "optional",
+      "description": "The storage device snapshot identifier <code>(e.g. snap-1234567890abcdef0).</code>"
+    }
+}
+}
+

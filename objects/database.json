@@ -1,0 +1,56 @@
+{
+  "caption": "Database",
+  "description": "Database object represents a database instance (e.g. MySQL, PostgreSQL, Oracle, etc.).",
+  "extends": "database",
+  "name": "database",
+  "attributes": {
+    "cluster_uid": {
+      "requirement": "optional",
+      "description": "The database cluster identifier (e.g. cluster-1234567890abcdef0)."
+    },
+    "port": {
+      "requirement": "optional",
+      "description": "The database port number (e.g. 3306)."
+    },
+    "db_endpoint": {
+      "requirement": "recommended",
+      "description": "The database endpoint <code>(e.g. mydb.123456789012.us-west-2.rds.amazonaws.com)</code>."
+    },
+    "engine": {
+      "requirement": "optional",
+      "description": "The database engine name (e.g. mysql)."
+    },
+    "version": {
+      "requirement": "optional",
+      "description": "The database version (e.g. 5.7.38)."
+    },
+    "encryption_details": {
+      "requirement": "recommended",
+      "description": "The database encryption details"
+    },
+    "is_public": {
+      "requirement": "required",
+      "description": "Whether the database is publicly accessible (e.g. true)."
+    },
+    "is_encrypted": {
+      "requirement": "required",
+      "description": "Whether the database is encrypted (e.g. true)."
+    },
+    "status": {
+      "requirement": "recommended",
+      "description": "The database status (e.g. available)."
+    },
+    "user": {
+      "requirement": "optional",
+      "description": "The database user (e.g. admin)."
+    },
+    "security_group_uids": {
+      "requirement": "recommended",
+      "description": "The list of VPC security groups associated with the database instance. <code>(e.g. [\"sg-085912345678492fb\"]</code>"
+    },
+    "subnet_group": {
+      "requirement": "optional",
+      "description": "A database subnet group is a collection of subnets in a VPC designated for your database instance"
+    }
+  }
+}
