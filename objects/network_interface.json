@@ -1,0 +1,16 @@
+{
+  "caption": "Network Interface",
+  "description": "Network Interface details and configuration",
+  "extends": "network_interface",
+  "name": "network_interface",
+  "attributes": {
+    "attachments": {
+      "description": "Information about the network interface attachments.",
+      "requirement": "recommended"
+    },
+    "security_group_uids": {
+      "description": "List of security group unique identifiers associated with this network interface",
+      "requirement": "required"
+    }
+  }
+}

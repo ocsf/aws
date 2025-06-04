@@ -1,0 +1,28 @@
+{
+  "caption": "Snapshot Details",
+  "description": "Details of the snapshot of a resource",
+  "extends": "_entity",
+  "name": "snapshot_details",
+  "attributes": {
+    "created_time": {
+      "description": "When the snapshot was taken in Coordinated Universal Time (UTC).",
+      "requirement": "optional"
+    },
+    "encryption_details": {
+      "description": "The encryption details of the snapshot.",
+      "requirement": "optional"
+    },
+    "is_encrypted": {
+      "description": "Whether the snapshot is encrypted <code>(e.g. TRUE)</code>.",
+      "requirement": "required"
+    },
+    "type": {
+      "description": "The type of the snapshot.",
+      "requirement": "optional"
+    },
+    "uid": {
+      "description": "The unique identifier of the snapshot.",
+      "requirement": "optional"
+    }
+  }
+}

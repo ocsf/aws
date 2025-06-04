@@ -4,20 +4,20 @@
   "extends": "device",
   "name": "device",
   "attributes": {
+    "encryption_details": {
+      "description": "The encryption details of resource. See specific usage.",
+      "requirement": "recommended"
+    },
     "image": {
       "requirement": "required"
     },
     "instance_profile": {
-      "requirement": "recommended",
-      "description": "The IAM instance profile to associate with the instance."
+      "description": "The IAM instance profile to associate with the instance.",
+      "requirement": "recommended"
     },
     "launch_time": {
-      "requirement": "recommended",
-      "description": "The time the instance was launched."
-    },
-    "encryption_details": {
-      "description": "The encryption details of resource. See specific usage.",
+      "description": "The time the instance was launched.",
       "requirement": "recommended"
     }
-}
+  }
 }

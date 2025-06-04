@@ -1,0 +1,32 @@
+{
+  "caption": "Instance Profile",
+  "description": "Information about the instance profile associated with the compute resource, which provides the resource with permissions to interact with other services",
+  "extends": "_entity",
+  "name": "instance_profile",
+  "attributes": {
+    "created_time": {
+      "description": "The time when the instance profile was created.",
+      "requirement": "optional"
+    },
+    "name": {
+      "description": "The name of the instance profile.",
+      "requirement": "recommended"
+    },
+    "path": {
+      "description": "The path of the instance profile.",
+      "requirement": "optional"
+    },
+    "uid": {
+      "description": "The unique ID of the instance profile.",
+      "requirement": "recommended"
+    },
+    "uid_alt": {
+      "description": "The ARN of the instance profile.",
+      "requirement": "recommended"
+    },
+    "users": {
+      "description": "The users of the instance profile.",
+      "requirement": "optional"
+    }
+  }
+}

@@ -1,25 +1,25 @@
 {
   "caption": "Container Orchestration Runtime",
-  "name": "container_orchestration_runtime",
   "description": "The Container Orchestration object identifies the runtime environment for orchestration",
+  "name": "container_orchestration_runtime",
   "attributes": {
-    "uid": {
-      "description": "FIXME",
-      "requirement": "optional"
-    },
     "cpu": {
-      "requirement": "optional"
-    },
-    "memory": {
-      "requirement": "optional"
-    },
-    "task_uid": {
       "requirement": "optional"
     },
     "hostname": {
       "requirement": "optional"
     },
+    "memory": {
+      "requirement": "optional"
+    },
     "overrides": {
+      "requirement": "optional"
+    },
+    "task_uid": {
+      "requirement": "optional"
+    },
+    "uid": {
+      "description": "FIXME",
       "requirement": "optional"
     }
   }

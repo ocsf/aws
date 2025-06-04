@@ -1,0 +1,40 @@
+{
+  "caption": "Certificate",
+  "description": "Public and private (SSL/TLS) certificates for use with AWS services and internal connected resources.",
+  "extends": "certificate",
+  "name": "certificate",
+  "attributes": {
+    "algorithm": {
+      "description": "The algorithm of the certificate <code>(e.g RSA-1024)</code>. ",
+      "requirement": "recommended"
+    },
+    "domain": {
+      "description": "The domain name of the certificate.",
+      "requirement": "recommended"
+    },
+    "imported_time": {
+      "description": "The timestamp of when the certificate was imported. ",
+      "requirement": "recommended"
+    },
+    "in_use_by": {
+      "description": "List of resource ARNs where the certificate is in use. ",
+      "requirement": "recommended"
+    },
+    "key_usages": {
+      "requirement": "recommended"
+    },
+    "renewable_eligibility": {
+      "description": "Whether the certificate is eligible for renewal <code>(e.g. ELIGIBLE)</code>. ",
+      "requirement": "recommended"
+    },
+    "source": {
+      "caption": "Certificate Source",
+      "description": "The source of the certificate. For certificates that AWS Certificate Manager provides, Type is <code>AMAZON_ISSUED</code>. For certificates that are imported with ImportCertificate, Type is <code>IMPORTED</code>.",
+      "requirement": "recommended"
+    },
+    "state": {
+      "description": "The state of the certificate <code>(e.g. ISSUED)</code>. ",
+      "requirement": "recommended"
+    }
+  }
+}

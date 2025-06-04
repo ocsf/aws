@@ -4,13 +4,13 @@
   "extends": "affected_package",
   "name": "affected_package",
   "attributes": {
-    "$include": [
-      "profiles/aws_attr.json"
-    ],
     "test": {
       "profile": "aws/aws_attr",
       "requirement": "optional"
-    }
+    },
+    "$include": [
+      "profiles/aws_attr.json"
+    ]
   },
   "profiles": [
     "aws/aws_attr"
