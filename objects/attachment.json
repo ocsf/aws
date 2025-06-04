@@ -1,24 +1,32 @@
 {
-  "caption": "Attachments to a storage device",
-  "description": "The attachment object contains information about the attachment of a volume to an instance.",
-  "extends": "object",
+  "caption": "Attachments",
+  "description": "This object contains information about the attachment <code>(e.g. Volume, NetworkInterface, etc)</code>.",
+  "extends": "_entity",
   "name": "attachment",
   "attributes": {
-    "state": {
-      "requirement": "recommended",
-      "description": "The attachment state. <code>(e.g. attached)</code>."
+    "attach_time": {
+      "description": "Timestamp when the attachment was attached.",
+      "requirement": "recommended"
     },
     "instance_uid": {
-      "requirement": "required",
-      "description": "The ID of the instance the volume is attached to."
+      "description": "The unique identifier of the resource that the attachment is attached to <code>(e.g. i-1234567890abcdef0)</code>.",
+      "requirement": "required"
     },
     "is_delete_on_termination": {
-      "requirement": "recommended",
-      "description": "Whether the volume should be destroyed on instance termination."
+      "description": "Boolean flag indicating if the attachment should be automatically deleted when the instance is terminated.",
+      "requirement": "recommended"
     },
-    "attach_time": {
-      "requirement": "recommended",
-      "description": "Time the volume was attached to the instance."
+    "name": {
+      "description": "The name of the attachment <code>(e.g. /dev/sda1)</code>.",
+      "requirement": "optional"
+    },
+    "state": {
+      "description": "The current state of the attachment (e.g. attached, detaching).",
+      "requirement": "recommended"
+    },
+    "uid": {
+      "description": "The unique identifier of the attachment <code>(e.g. vol-1234567890abcdef0, eni-attach-43348162)</code>.",
+      "requirement": "required"
     }
-}
+  }
 }

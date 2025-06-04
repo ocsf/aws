@@ -1,0 +1,12 @@
+{
+  "caption": "Policy",
+  "description": "The Policy object describes the policies that are applicable. <p>Policy attributes provide traceability to the operational state of the security product at the time that the event was captured, facilitating forensics, troubleshooting, and policy tuning/adjustments.</p>",
+  "extends": "policy",
+  "name": "policy",
+  "attributes": {
+    "type": {
+      "description": "The policy type. For example: <code>Identity Policy, Resource Policy, Service Control Policy, etc.</code>.",
+      "requirement": "optional"
+    }
+  }
+}

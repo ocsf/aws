@@ -5,21 +5,20 @@
   "name": "storage_device",
   "attributes": {
     "attachments": {
-      "requirement": "recommended",
-      "description": "The storage device attachments"
-    },
-    "is_encrypted": {
-      "requirement": "required",
-      "description": "Whether the storage device is encrypted <code>(e.g. true)</code>."
+      "description": "The storage device attachments",
+      "requirement": "recommended"
     },
     "encryption_details": {
-      "requirement": "recommended",
-      "description": "The storage device encryption key, if the resource is encrypted"
+      "description": "The storage device encryption key, if the resource is encrypted",
+      "requirement": "recommended"
+    },
+    "is_encrypted": {
+      "description": "Whether the storage device is encrypted <code>(e.g. true)</code>.",
+      "requirement": "required"
     },
     "snapshot_id": {
-      "requirement": "optional",
-      "description": "The storage device snapshot identifier <code>(e.g. snap-1234567890abcdef0).</code>"
+      "description": "The storage device snapshot identifier <code>(e.g. snap-1234567890abcdef0).</code>",
+      "requirement": "optional"
     }
+  }
 }
-}
-

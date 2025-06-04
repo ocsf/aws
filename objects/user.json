@@ -1,0 +1,16 @@
+{
+  "caption": "User",
+  "description": "The User object describes the characteristics of a user/person or a security principal.",
+  "extends": "user",
+  "name": "user",
+  "attributes": {
+    "instance_profiles": {
+      "description": "The list of the instance profiles that is attached to an EC2 instance to give permissions to the instance.",
+      "requirement": "optional"
+    },
+    "policies": {
+      "description": "Describes the polices that assign permissions for users, groups, roles, and resources.",
+      "requirement": "optional"
+    }
+  }
+}

@@ -4,12 +4,12 @@
   "extends": "_entity",
   "name": "subnet_info",
   "attributes": {
-    "ip_count": {
-      "description": "The number of IP addresses in the subnet.",
-      "requirement": "recommended"
-    },
     "cidr_block": {
       "description": "The CIDR block of the subnet.",
+      "requirement": "recommended"
+    },
+    "ip_count": {
+      "description": "The number of IP addresses in the subnet.",
       "requirement": "recommended"
     },
     "is_default": {
@@ -24,13 +24,13 @@
       "description": "The current state of the subnet <code>(e.g. avalible)</code>",
       "requirement": "recommended"
     },
+    "vpc_uid": {
+      "description": "The VPC ID of the subnet.",
+      "requirement": "recommended"
+    },
     "zone": {
       "caption": "Avaliblity Zone",
       "description": "The Availability Zone of the subnet.",
-      "requirement": "recommended"
-    },
-    "vpc_uid": {
-      "description": "The VPC ID of the subnet.",
       "requirement": "recommended"
     }
   }

@@ -1,7 +1,7 @@
 {
+  "uid": 998,
   "caption": "AWS",
   "description": "AWS Extension",
   "name": "aws",
-  "version": "1.0.0",
-  "uid": 998
+  "version": "1.0.0"
 }

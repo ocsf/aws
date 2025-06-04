@@ -5,40 +5,40 @@
   "name": "image",
   "attributes": {
     "architecture": {
-      "requirement": "recommended",
-      "description": "The CPU architecture that the image is built for <code>(e.g. x86_64, arm64)</code>."
-    },
-    "hash": {
-      "requirement": "recommended",
-      "description": "The unique hash of the image"
-    },
-    "platform": {
-      "requirement": "recommended",
-      "description": "The operating system platform of the image <code>(e.g. AMAZON_LINUX_2)</code>."
-    },
-    "registry_uid": {
-      "requirement": "recommended",
-      "description": "The unique identifier of the registry where this image is stored"
-    },
-    "last_usage_time": {
-      "requirement": "recommended",
-      "description": "Timestamp of when this image was last used"
-    },
-    "repository_name": {
-      "requirement": "recommended",
-      "description": "Name of the repository containing this image"
+      "description": "The CPU architecture that the image is built for <code>(e.g. x86_64, arm64)</code>.",
+      "requirement": "recommended"
     },
     "created_time": {
-      "requirement": "recommended",
-      "description": "Timestamp of when this image was created"
+      "description": "Timestamp of when this image was created",
+      "requirement": "recommended"
     },
-    "modified_time": {
-      "requirement": "recommended",
-      "description": "Timestamp of when this image was last modified"
+    "hash": {
+      "description": "The unique hash of the image",
+      "requirement": "recommended"
     },
     "in_use_count": {
-      "requirement": "recommended",
-      "description": "Number of containers using this image"
+      "description": "Number of containers using this image",
+      "requirement": "recommended"
+    },
+    "last_usage_time": {
+      "description": "Timestamp of when this image was last used",
+      "requirement": "recommended"
+    },
+    "modified_time": {
+      "description": "Timestamp of when this image was last modified",
+      "requirement": "recommended"
+    },
+    "platform": {
+      "description": "The operating system platform of the image <code>(e.g. AMAZON_LINUX_2)</code>.",
+      "requirement": "recommended"
+    },
+    "registry_uid": {
+      "description": "The unique identifier of the registry where this image is stored",
+      "requirement": "recommended"
+    },
+    "repository_name": {
+      "description": "Name of the repository containing this image",
+      "requirement": "recommended"
     }
   }
 }
