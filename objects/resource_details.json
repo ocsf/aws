@@ -5,22 +5,28 @@
   "name": "resource_details",
   "attributes": {
     "cloud_function": {
-      "requirement": "optional"
+      "requirement": "optional",
+      "profile": "aws/aws_resources"
     },
     "database": {
-      "requirement": "optional"
+      "requirement": "optional",
+      "profile": "aws/aws_resources"
     },
     "databucket": {
-      "requirement": "optional"
+      "requirement": "optional",
+      "profile": "aws/aws_resources"
     },
     "db_cluster": {
-      "requirement": "optional"
+      "requirement": "optional",
+      "profile": "aws/aws_resources"
     },
     "device": {
-      "requirement": "optional"
+      "requirement": "optional",
+      "profile": "aws/aws_resources"
     },
     "image": {
-      "requirement": "optional"
+      "requirement": "optional",
+      "profile": "aws/aws_resources"
     },
     "ip": {
       "description": "The IP address associated with the instance in either IPv4 or IPv6 format.",
@@ -28,24 +34,29 @@
     },
     "ip_addresses": {
       "description": "An array of IP addresses (IPv4 or IPv6) associated with the device. These may include both public and private IP addresses.",
-      "requirement": "optional"
+      "requirement": "optional",
+      "profile": "aws/aws_resources"
     },
     "name": {
       "description": "The resource name <code>(e.g. my-instance)</code>.",
       "requirement": "recommended"
     },
     "network_interface": {
-      "requirement": "optional"
+      "requirement": "optional",
+      "profile": "aws/aws_resources"
     },
     "storage_device": {
-      "requirement": "optional"
+      "requirement": "optional",
+      "profile": "aws/aws_resources"
     },
     "subnet_info": {
-      "requirement": "optional"
+      "requirement": "optional",
+      "profile": "aws/aws_resources"
     },
     "subnet_uid": {
       "description": "The subnet ID where the resource is located <code>(e.g. subnet-1234567890ab)</code>.",
-      "requirement": "recommended"
+      "requirement": "recommended",
+      "profile": "aws/aws_resources"
     },
     "type": {
       "description": "The resource type <code>(e.g. AWS::EC2::Instance)</code>.",
@@ -572,7 +583,8 @@
           "caption": "Other",
           "description": "The type is not mapped. See the <code>type</code> attribute, which contains a data source specific value."
         }
-      }
+      },
+      "profile": "aws/aws_resources"
     },
     "uid": {
       "description": "The resource unique identifier <code>(e.g. i-1234567890abcdef0)</code>.",
@@ -583,11 +595,19 @@
       "requirement": "optional"
     },
     "user": {
-      "requirement": "optional"
+      "requirement": "optional",
+      "profile": "aws/aws_resources"
     },
     "vpc_uid": {
       "description": "The VPC ID where the resource is located <code>(e.g. vpc-12345678900)</code>.",
-      "requirement": "recommended"
-    }
-  }
+      "requirement": "recommended",
+      "profile": "aws/aws_resources"
+    },
+    "$include": [
+      "profiles/aws_resources.json"
+    ]
+  },
+  "profiles": [
+    "aws/aws_resources"
+  ]
 }
