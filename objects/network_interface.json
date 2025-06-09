@@ -10,7 +10,7 @@
     },
     "security_group_uids": {
       "description": "List of security group unique identifiers associated with this network interface",
-      "requirement": "required"
+      "requirement": "recommended"
     }
   }
 }

@@ -9,7 +9,7 @@
       "requirement": "recommended"
     },
     "image": {
-      "requirement": "required"
+      "requirement": "recommended"
     },
     "instance_profile": {
       "description": "The IAM instance profile to associate with the instance.",
