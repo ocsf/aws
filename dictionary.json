@@ -276,8 +276,8 @@
       "description": "The last reported status from the runtime environment for a container",
       "type": "string_t"
     },
-    "last_usage_time": {
-      "caption": "Last Usage time",
+    "last_used_time": {
+      "caption": "Last Used time",
       "description": "The time stamp when the resource was last used. See specific usage.",
       "type": "timestamp_t"
     },
