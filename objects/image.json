@@ -20,7 +20,7 @@
       "description": "Number of containers using this image",
       "requirement": "recommended"
     },
-    "last_usage_time": {
+    "last_used_time": {
       "description": "Timestamp of when this image was last used",
       "requirement": "recommended"
     },
