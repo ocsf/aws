@@ -64,16 +64,13 @@
       "requirement": "optional"
     },
     "subnet_info": {
+      "description": "Details about the subnet where the resource is located.",
       "profile": "aws/aws_resources",
       "requirement": "optional"
     },
-    "subnet_uid": {
-      "description": "The subnet ID where the resource is located <code>(e.g. subnet-1234567890ab)</code>.",
-      "profile": "aws/aws_resources",
-      "requirement": "recommended"
-    },
     "type": {
       "description": "The resource type <code>(e.g. AWS::EC2::Instance)</code>.",
+      "profile": "aws/aws_resources",
       "requirement": "required"
     },
     "type_id": {

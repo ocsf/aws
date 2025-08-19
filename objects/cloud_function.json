@@ -36,8 +36,8 @@
       "description": "Array of security groups associated with the cloud function.",
       "requirement": "recommended"
     },
-    "subnet_uids": {
-      "description": "The list of subnets associated with the cloud function <code>(e.g. [\"subnet-071f712345678e7c8\", \"subnet-07fd123456788a036\"])</code>.",
+    "subnet_info_list": {
+      "description": "The details about subnets associated with the cloud function <code>(e.g. [\"subnet-071f712345678e7c8\", \"subnet-07fd123456788a036\"])</code>.",
       "requirement": "recommended"
     },
     "user": {
