@@ -24,10 +24,10 @@
       "type": "timestamp_t"
     },
     "attachments": {
-      "is_array": true,
       "caption": "List of Attachments",
       "description": "A list of attachments to the resource",
-      "type": "attachment"
+      "type": "attachment",
+      "is_array": true
     },
     "authentication_type": {
       "caption": "Authentication Type",
@@ -50,10 +50,10 @@
       "type": "cloud_function"
     },
     "cluster_members": {
-      "is_array": true,
       "caption": "Database Cluster Members",
       "description": "List of database instance that are part of the database cluster.",
-      "type": "string_t"
+      "type": "string_t",
+      "is_array": true
     },
     "cluster_name": {
       "caption": "Cluster Name",
@@ -161,10 +161,10 @@
       "type": "timestamp_t"
     },
     "in_use_by": {
-      "is_array": true,
       "caption": "In Use By",
       "description": "List of resources currently using this certificate",
-      "type": "string_t"
+      "type": "string_t",
+      "is_array": true
     },
     "in_use_count": {
       "caption": "In Use Count",
@@ -177,10 +177,10 @@
       "type": "instance_profile"
     },
     "instance_profiles": {
-      "is_array": true,
       "caption": "Instance Profiles",
       "description": "A list of instance profiles associated with the compute resource, which provides the resource with permissions to interact with other services",
-      "type": "instance_profile"
+      "type": "instance_profile",
+      "is_array": true
     },
     "integration": {
       "caption": "Integration",
@@ -188,10 +188,10 @@
       "type": "integration"
     },
     "ip_addresses": {
-      "is_array": true,
       "caption": "IP Address Array ",
       "description": "An array of IP addresses (IPv4 or IPv6) associated with the instance. These may include both public and private IP addresses.",
-      "type": "ip_t"
+      "type": "ip_t",
+      "is_array": true
     },
     "ip_count": {
       "caption": "IP Count",
@@ -209,7 +209,6 @@
       "type": "boolean_t"
     },
     "key_usages": {
-      "is_array": true,
       "caption": "Key Usages",
       "description": " Key usage defines the purpose of the key contained in the certificate. ",
       "type": "string_t",
@@ -264,7 +263,8 @@
           "description": "RFC 5280",
           "url": "https://www.rfc-editor.org/rfc/rfc5280"
         }
-      ]
+      ],
+      "is_array": true
     },
     "kubernetes": {
       "caption": "kubernetes",
@@ -285,6 +285,12 @@
       "caption": "Launch Time",
       "description": "The reported time a device or instance was launched",
       "type": "timestamp_t"
+    },
+    "layers": {
+      "caption": "Cloud Function Layers",
+      "description": "The list of layers associated with the cloud function.",
+      "type": "layer",
+      "is_array": true
     },
     "lb_actions": {
       "caption": "Load Balancer Actions",
@@ -502,11 +508,11 @@
       "description": "Details provided to describe the rule and the rule's behavior",
       "type": "json_t"
     },
-    "security_group_uids": {
-      "is_array": true,
-      "caption": "List of Security groups",
-      "description": "The list of security groups associated with the resource",
-      "type": "string_t"
+    "security_groups": {
+      "caption": "Array of Security groups",
+      "description": "The array of security groups associated with the resource",
+      "type": "security_group",
+      "is_array": true
     },
     "server_protocol": {
       "caption": "Server Protocol",
@@ -559,16 +565,16 @@
       "type": "subnet_info"
     },
     "subnet_info_list": {
-      "is_array": true,
       "caption": "List of Subnet Information",
       "description": "A list of supporting information about a subnet.",
-      "type": "subnet_info"
+      "type": "subnet_info",
+      "is_array": true
     },
     "subnet_uids": {
-      "is_array": true,
       "caption": "List of Subnets",
       "description": "The list of subnets associated with the resource",
-      "type": "string_t"
+      "type": "string_t",
+      "is_array": true
     },
     "target_group_uid": {
       "caption": "Target Group UID",
@@ -586,10 +592,10 @@
       "type": "integer_t"
     },
     "target_status_code_list": {
-      "is_array": true,
       "caption": "target_status_code_list",
       "description": "A space-delimited list of status codes from the responses of the targets, enclosed in double quotes. Currently, this list can contain one item and it matches the target_status_code field.",
-      "type": "integer_t"
+      "type": "integer_t",
+      "is_array": true
     },
     "task_uid": {
       "caption": "Task UID",
@@ -650,10 +656,10 @@
       "type": "string_t"
     },
     "zones": {
-      "is_array": true,
       "caption": "List of Availability Zones",
       "description": "A list of availability zones",
-      "type": "string_t"
+      "type": "string_t",
+      "is_array": true
     }
   }
 }

@@ -4,12 +4,20 @@
   "extends": "_entity",
   "name": "storage_device",
   "attributes": {
+    "name": {
+      "description": "The name of the storage device.",
+      "requirement": "recommended"
+    },
+    "uid": {
+      "description": "The unique identifier of the storage device.",
+      "requirement": "recommended"
+    },
     "attachments": {
-      "description": "The storage device attachments",
+      "description": "The storage device attachments.",
       "requirement": "recommended"
     },
     "encryption_details": {
-      "description": "The storage device encryption key, if the resource is encrypted",
+      "description": "The storage device encryption key, if the resource is encrypted.",
       "requirement": "recommended"
     },
     "is_encrypted": {
@@ -19,6 +27,13 @@
     "snapshot_id": {
       "description": "The storage device snapshot identifier <code>(e.g. snap-1234567890abcdef0).</code>",
       "requirement": "optional"
+    },
+    "uid_alt": {
+      "description": "This is the Amazon Resource Name (ARN) of the resource.",
+      "requirement": "recommended"
     }
+  },
+  "constraints": {
+    "at_least_one": ["name", "uid", "uid_alt"]
   }
 }

@@ -21,12 +21,21 @@
       "requirement": "recommended"
     },
     "uid_alt": {
-      "description": "The ARN of the instance profile.",
+      "description": "This is the Amazon Resource Name (ARN) of the resource.",
       "requirement": "recommended"
     },
     "users": {
       "description": "The users of the instance profile.",
       "requirement": "optional"
     }
-  }
+  },
+  "constraints": {
+    "at_least_one": ["name", "uid", "uid_alt"]
+  },
+  "references": [
+    {
+      "description": "AWS EC2 IAM Instance Profiles",
+      "url": "https://docs.aws.amazon.com/managedservices/latest/userguide/defaults-instance-profile.html"
+    }
+  ]
 }

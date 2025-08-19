@@ -4,24 +4,40 @@
   "extends": "_entity",
   "name": "cloud_function",
   "attributes": {
+    "name": {
+      "description": "The name of the cloud function <code>(e.g. my-cloud-function)</code>.",
+      "requirement": "recommended"
+    },
+    "uid": {
+      "description": "The unique identifier of the cloud function <code>(e.g. my-cloud-function)</code>.",
+      "requirement": "recommended"
+    },
+    "uid_alt": {
+      "description": "This is the Amazon Resource Name (ARN) of the resource.",
+      "requirement": "recommended"
+    },
     "encryption_details": {
-      "description": "The cloud function encryption details <code>(e.g. arn:aws:kms:us-west-2:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab)</code>",
+      "description": "The cloud function encryption details <code>(e.g. arn:aws:kms:us-west-2:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab)</code>.",
       "requirement": "recommended"
     },
     "handler": {
-      "description": "The method in the function code that processes events. When invoked, Lambda runs this handler method with event data and context until it returns a response, exits, or times out",
+      "description": "The method in the function code that processes events. When invoked, Lambda runs this handler method with event data and context until it returns a response, exits, or times out.",
+      "requirement": "optional"
+    },
+    "layers": {
+      "description": "The list of cloud function layers that contain supplementary code or data.",
       "requirement": "optional"
     },
     "runtime": {
-      "description": "The cloud function language-specific environment <code>(e.g. Node.js, Python,Java, Ruby)</code> ",
+      "description": "The cloud function language-specific environment <code>(e.g. Node.js, Python,Java, Ruby)</code>.",
       "requirement": "optional"
     },
-    "security_group_uids": {
-      "description": "The list of security groups associated with the cloud function <code>(e.g. [\"sg-085912345678492fb\"]</code>",
+    "security_groups": {
+      "description": "Array of security groups associated with the cloud function.",
       "requirement": "recommended"
     },
     "subnet_uids": {
-      "description": "The list of subnets associated with the cloud function <code>(e.g. [\"subnet-071f712345678e7c8\", \"subnet-07fd123456788a036\"])</code>",
+      "description": "The list of subnets associated with the cloud function <code>(e.g. [\"subnet-071f712345678e7c8\", \"subnet-07fd123456788a036\"])</code>.",
       "requirement": "recommended"
     },
     "user": {
@@ -33,8 +49,17 @@
       "requirement": "optional"
     },
     "vpc_uid": {
-      "description": "The unique identifier of the Virtual Private Cloud (VPC) if the cloud function is in a VPC",
+      "description": "The unique identifier of the Virtual Private Cloud (VPC) if the cloud function is in a VPC.",
       "requirement": "recommended"
     }
-  }
+  },
+  "constraints": {
+    "at_least_one": ["name", "uid", "uid_alt"]
+  },
+  "references": [
+    {
+      "description": "AWS Lambda",
+      "url": "https://docs.aws.amazon.com/lambda/latest/dg/welcome.html"
+    }
+  ]
 }

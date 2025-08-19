@@ -12,5 +12,13 @@
       "description": "Describes the polices that assign permissions for users, groups, roles, and resources.",
       "requirement": "optional"
     }
+  },
+  "constraints": {
+    "at_least_one": [
+      "account",
+      "name",
+      "uid",
+      "uid_alt"
+    ]
   }
 }

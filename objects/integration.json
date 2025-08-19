@@ -11,7 +11,7 @@
     },
     "name": {
       "description": "Name of the resource",
-      "requirement": "optional"
+      "requirement": "recommended"
     },
     "request_id": {
       "requirement": "optional"
@@ -21,11 +21,11 @@
     },
     "type": {
       "description": "Type of the resource",
-      "requirement": "optional"
+      "requirement": "recommended"
     },
     "uid": {
       "description": "Unique Id of the resource",
-      "requirement": "optional"
+      "requirement": "recommended"
     }
   }
 }

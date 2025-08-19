@@ -18,7 +18,7 @@
     },
     "name": {
       "description": "The name of the attachment <code>(e.g. /dev/sda1)</code>.",
-      "requirement": "optional"
+      "requirement": "recommended"
     },
     "state": {
       "description": "The current state of the attachment (e.g. attached, detaching).",
@@ -26,7 +26,14 @@
     },
     "uid": {
       "description": "The unique identifier of the attachment <code>(e.g. vol-1234567890abcdef0, eni-attach-43348162)</code>.",
-      "requirement": "required"
+      "requirement": "recommended"
+    },
+    "uid_alt": {
+      "description": "This is the Amazon Resource Name (ARN) of the resource.",
+      "requirement": "recommended"
     }
+  },
+  "constraints": {
+    "at_least_one": ["name", "uid", "uid_alt"]
   }
 }

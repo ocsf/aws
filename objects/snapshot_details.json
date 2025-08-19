@@ -4,6 +4,10 @@
   "extends": "_entity",
   "name": "snapshot_details",
   "attributes": {
+    "name": {
+      "description": "The name of the snapshot.",
+      "requirement": "recommended"
+    },
     "created_time": {
       "description": "When the snapshot was taken in Coordinated Universal Time (UTC).",
       "requirement": "optional"
@@ -22,7 +26,14 @@
     },
     "uid": {
       "description": "The unique identifier of the snapshot.",
-      "requirement": "optional"
+      "requirement": "recommended"
+    },
+    "uid_alt": {
+      "description": "This is the Amazon Resource Name (ARN) of the resource.",
+      "requirement": "recommended"
     }
+  },
+  "constraints": {
+    "at_least_one": ["name", "uid", "uid_alt"]
   }
 }

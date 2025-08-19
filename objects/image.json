@@ -13,19 +13,19 @@
       "requirement": "recommended"
     },
     "hash": {
-      "description": "The unique hash of the image",
+      "description": "The unique hash of the image.",
       "requirement": "recommended"
     },
     "in_use_count": {
-      "description": "Number of containers using this image",
+      "description": "Number of containers using this image.",
       "requirement": "recommended"
     },
     "last_used_time": {
-      "description": "Timestamp of when this image was last used",
+      "description": "Timestamp of when this image was last used.",
       "requirement": "recommended"
     },
     "modified_time": {
-      "description": "Timestamp of when this image was last modified",
+      "description": "Timestamp of when this image was last modified.",
       "requirement": "recommended"
     },
     "platform": {
@@ -33,12 +33,33 @@
       "requirement": "recommended"
     },
     "registry_uid": {
-      "description": "The unique identifier of the registry where this image is stored",
+      "description": "The unique identifier of the registry where this image is stored.",
       "requirement": "recommended"
     },
     "repository_name": {
-      "description": "Name of the repository containing this image",
+      "description": "Name of the repository containing this image.",
+      "requirement": "recommended"
+    },
+    "name": {
+      "description": "The name of the container image.",
+      "requirement": "recommended"
+    },
+    "uid": {
+      "description": "The unique identifier of the container image.",
+      "requirement": "recommended"
+    },
+    "uid_alt": {
+      "description": "This is the Amazon Resource Name (ARN) of the resource.",
       "requirement": "recommended"
     }
-  }
+  },
+  "constraints": {
+    "at_least_one": ["name", "uid", "uid_alt"]
+  },
+  "references": [
+    {
+      "description": "AWS Container Images",
+      "url": "https://docs.aws.amazon.com/AmazonECS/latest/developerguide/create-container-image.html"
+    }
+  ]
 }

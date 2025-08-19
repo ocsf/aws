@@ -1,0 +1,33 @@
+{
+  "caption": "Cloud Function Layer",
+  "description": "An archive that packages reusable code, dependencies, and configurations to share across multiple cloud functions.",
+  "extends": "_entity",
+  "name": "layer",
+  "attributes": {
+    "hash": {
+      "description": "The hash value of a cloud function layer .zip file",
+      "requirement": "optional"
+    },
+    "name": {
+      "description": "The name of the cloud function layer.",
+      "requirement": "recommended"
+    },
+    "uid": {
+      "description": "The unique identifier of the cloud function layer",
+      "requirement": "recommended"
+    },
+    "uid_alt": {
+      "description": "This is the Amazon Resource Name (ARN) of the resource.",
+      "requirement": "recommended"
+    }
+  },
+  "constraints": {
+    "at_least_one": ["name", "uid", "uid_alt"]
+  },
+  "references": [
+    {
+      "description": "AWS Lambda Layers",
+      "url": "https://docs.aws.amazon.com/lambda/latest/dg/chapter-layers.html"
+    }
+  ]
+}

@@ -4,8 +4,12 @@
   "extends": "_entity",
   "name": "db_cluster",
   "attributes": {
+    "name": {
+      "description": "The name of the database cluster (e.g. mydb).",
+      "requirement": "recommended"
+    },
     "cluster_members": {
-      "description": "The list of database cluster members <code>(e.g. [database-3-instance-1]</code>",
+      "description": "The list of database cluster members <code>(e.g. [database-3-instance-1]</code>.",
       "requirement": "optional"
     },
     "created_time": {
@@ -21,7 +25,7 @@
       "requirement": "optional"
     },
     "encryption_details": {
-      "description": "The database cluster encryption details",
+      "description": "The database cluster encryption details.",
       "requirement": "recommended"
     },
     "engine": {
@@ -40,12 +44,12 @@
       "description": "The database port number (e.g. 3306).",
       "requirement": "optional"
     },
-    "security_group_uids": {
-      "description": "The list of VPC security groups associated with the database cluster. <code>(e.g. [sg-085912345678492fb]</code>",
+    "security_groups": {
+      "description": "Array of VPC security groups associated with the database cluster.",
       "requirement": "recommended"
     },
     "snapshot_details": {
-      "description": "The database cluster snapshot details",
+      "description": "The database cluster snapshot details.",
       "requirement": "optional"
     },
     "status": {
@@ -53,12 +57,16 @@
       "requirement": "recommended"
     },
     "subnet_group": {
-      "description": "The name of the subnet group associated with the database cluster",
+      "description": "The name of the subnet group associated with the database cluster.",
       "requirement": "optional"
     },
     "uid": {
       "description": "The database cluster identifier (e.g. cluster-1234567890abcdef0).",
-      "requirement": "optional"
+      "requirement": "recommended"
+    },
+    "uid_alt": {
+      "description": "This is the Amazon Resource Name (ARN) of the resource.",
+      "requirement": "recommended"
     },
     "version": {
       "description": "The database version (e.g. 5.7.38).",
@@ -68,5 +76,14 @@
       "description": "The availability zones (e.g. us-west-2a).",
       "requirement": "optional"
     }
-  }
+  },
+  "constraints": {
+    "at_least_one": ["name", "uid", "uid_alt"]
+  },
+  "references": [
+    {
+      "description": "AWS Database Clusters",
+      "url": "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/create-multi-az-db-cluster.html"
+    }
+  ]
 }

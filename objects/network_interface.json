@@ -8,9 +8,23 @@
       "description": "Information about the network interface attachments.",
       "requirement": "recommended"
     },
-    "security_group_uids": {
-      "description": "List of security group unique identifiers associated with this network interface",
+    "security_groups": {
+      "description": "Array of security group unique identifiers associated with this network interface",
+      "requirement": "recommended"
+    },
+    "uid_alt": {
+      "description": "This is the Amazon Resource Name (ARN) of the resource.",
       "requirement": "recommended"
     }
+  },
+  "constraints": {
+    "at_least_one": [
+      "hostname",
+      "ip",
+      "mac",
+      "name",
+      "uid",
+      "uid_alt"
+    ]
   }
 }
