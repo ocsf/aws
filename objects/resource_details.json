@@ -4,29 +4,38 @@
   "extends": "resource_details",
   "name": "resource_details",
   "attributes": {
+    "$include": ["profiles/aws_resources.json"],
     "cloud_function": {
-      "requirement": "optional",
-      "profile": "aws/aws_resources"
+      "profile": "aws/aws_resources",
+      "requirement": "optional"
+    },
+    "cloud_partition": {
+      "profile": "cloud",
+      "requirement": "recommended"
+    },
+    "created_time": {
+      "description": "The time when the resource was created.",
+      "requirement": "recommended"
     },
     "database": {
-      "requirement": "optional",
-      "profile": "aws/aws_resources"
+      "profile": "aws/aws_resources",
+      "requirement": "optional"
     },
     "databucket": {
-      "requirement": "optional",
-      "profile": "aws/aws_resources"
+      "profile": "aws/aws_resources",
+      "requirement": "optional"
     },
     "db_cluster": {
-      "requirement": "optional",
-      "profile": "aws/aws_resources"
+      "profile": "aws/aws_resources",
+      "requirement": "optional"
     },
     "device": {
-      "requirement": "optional",
-      "profile": "aws/aws_resources"
+      "profile": "aws/aws_resources",
+      "requirement": "optional"
     },
     "image": {
-      "requirement": "optional",
-      "profile": "aws/aws_resources"
+      "profile": "aws/aws_resources",
+      "requirement": "optional"
     },
     "ip": {
       "description": "The IP address associated with the instance in either IPv4 or IPv6 format.",
@@ -34,37 +43,40 @@
     },
     "ip_addresses": {
       "description": "An array of IP addresses (IPv4 or IPv6) associated with the device. These may include both public and private IP addresses.",
-      "requirement": "optional",
-      "profile": "aws/aws_resources"
+      "profile": "aws/aws_resources",
+      "requirement": "optional"
     },
     "name": {
       "description": "The resource name <code>(e.g. my-instance)</code>.",
       "requirement": "recommended"
     },
     "network_interface": {
-      "requirement": "optional",
-      "profile": "aws/aws_resources"
+      "profile": "aws/aws_resources",
+      "requirement": "optional"
+    },
+    "region": {
+      "description": "The cloud region of the resource.",
+      "profile": "cloud",
+      "requirement": "recommended"
     },
     "storage_device": {
-      "requirement": "optional",
-      "profile": "aws/aws_resources"
+      "profile": "aws/aws_resources",
+      "requirement": "optional"
     },
     "subnet_info": {
-      "requirement": "optional",
-      "profile": "aws/aws_resources"
-    },
-    "subnet_uid": {
-      "description": "The subnet ID where the resource is located <code>(e.g. subnet-1234567890ab)</code>.",
-      "requirement": "recommended",
-      "profile": "aws/aws_resources"
+      "description": "Details about the subnet where the resource is located.",
+      "profile": "aws/aws_resources",
+      "requirement": "optional"
     },
     "type": {
       "description": "The resource type <code>(e.g. AWS::EC2::Instance)</code>.",
-      "requirement": "recommended"
+      "profile": "aws/aws_resources",
+      "requirement": "required"
     },
     "type_id": {
       "caption": "Type ID",
       "description": "The normalized type identifier of an object. See specific usage.",
+      "profile": "aws/aws_resources",
       "requirement": "recommended",
       "enum": {
         "0": {
@@ -75,133 +87,49 @@
           "caption": "AWS::Lambda::Function",
           "description": "A serverless compute resource that runs code in response to events and automatically manages the underlying compute resources."
         },
+        "2": {
+          "caption": "AWS::IAM::Policy",
+          "description": "A document that defines permissions to AWS resources and specifies what actions are allowed or denied on which resources."
+        },
+        "3": {
+          "caption": "AWS::EC2::SecurityGroup",
+          "description": "A virtual firewall that controls inbound and outbound traffic to AWS resources and Amazon EC2 instances."
+        },
+        "4": {
+          "caption": "AWS::EC2::Subnet",
+          "description": "A range of IP addresses in a VPC that can be used to isolate resources within the same network."
+        },
+        "5": {
+          "caption": "AWS::S3::Bucket",
+          "description": "A container for storing objects (files and data) in Amazon S3 with a globally unique name across all AWS Regions."
+        },
+        "6": {
+          "caption": "AWS::IAM::Role",
+          "description": "An IAM identity that defines permissions for AWS services and users to assume temporarily."
+        },
+        "7": {
+          "caption": "AWS::RDS::DBInstance",
+          "description": "A database instance running in the AWS cloud with automated backups, patching, and monitoring capabilities."
+        },
+        "8": {
+          "caption": "AWS::EC2::Instance",
+          "description": "A virtual server in the AWS cloud with configurable compute, memory, storage, and networking capacity."
+        },
+        "9": {
+          "caption": "AWS::EC2::Volume",
+          "description": "A persistent block storage volume for EC2 instances that can be attached and detached from instances as needed."
+        },
         "10": {
           "caption": "AWS::IAM::User",
           "description": "An IAM identity that represents a person or service requiring long-term AWS access credentials."
-        },
-        "100": {
-          "caption": "AWS::ElasticLoadBalancing::HealthCheck",
-          "description": "A configuration that determines the health status of instances registered with a load balancer."
-        },
-        "101": {
-          "caption": "AWS::ElasticLoadBalancing::Listener",
-          "description": "A process that checks for connection requests using a configured protocol and port, and forwards requests to targets."
-        },
-        "102": {
-          "caption": "AWS::ElasticLoadBalancing::ListenerRule",
-          "description": "A rule that defines how the load balancer routes requests to the targets in one or more target groups."
-        },
-        "103": {
-          "caption": "AWS::ElasticLoadBalancing::TargetGroup",
-          "description": "A group of targets (EC2 instances, containers, IP addresses) that receive traffic from a load balancer."
-        },
-        "104": {
-          "caption": "AWS::EventSchemas::Registry",
-          "description": "A container for event schemas in Amazon EventBridge Schema Registry, managing schema versions and access."
-        },
-        "105": {
-          "caption": "AWS::Glue::MLTransform",
-          "description": "A machine learning transformation that cleanses and transforms data automatically using machine learning algorithms."
-        },
-        "106": {
-          "caption": "AWS::GuardDuty::Filter",
-          "description": "A filter that defines which findings are included or excluded from GuardDuty results based on specified criteria."
-        },
-        "107": {
-          "caption": "AWS::GuardDuty::IPSet",
-          "description": "A list of trusted IP addresses that are used by GuardDuty to allow or identify safe communications."
-        },
-        "108": {
-          "caption": "AWS::GuardDuty::ThreatIntelSet",
-          "description": "A collection of known malicious IP addresses that GuardDuty uses to identify potentially malicious activity."
-        },
-        "109": {
-          "caption": "AWS::IoT::Thing",
-          "description": "A representation of a specific device or logical entity in AWS IoT that can connect and communicate with the AWS cloud."
         },
         "11": {
           "caption": "AWS::AccessAnalyzer::Analyzer",
           "description": "A tool that identifies resources shared with external entities and helps ensure intended access to resources."
         },
-        "110": {
-          "caption": "AWS::MSK::Cluster",
-          "description": "A managed Apache Kafka cluster that simplifies the setup, scaling, and management of Kafka infrastructure."
-        },
-        "111": {
-          "caption": "AWS::Macie::Session",
-          "description": "A configuration that enables Amazon Macie to discover, classify, and protect sensitive data in AWS."
-        },
-        "112": {
-          "caption": "AWS::NetworkFirewall::Firewall",
-          "description": "A stateful, managed network firewall service that filters traffic at the perimeter of a VPC."
-        },
-        "113": {
-          "caption": "AWS::NetworkFirewall::FirewallPolicy",
-          "description": "A set of rule groups and default actions that determine how a Network Firewall firewall handles traffic."
-        },
-        "114": {
-          "caption": "AWS::NetworkFirewall::RuleGroup",
-          "description": "A reusable collection of stateful or stateless rules for AWS Network Firewall that defines network traffic filtering behavior."
-        },
-        "115": {
-          "caption": "AWS::RDS::DBClusterSnapshot",
-          "description": "A point-in-time backup of an entire DB cluster that can be used to restore the cluster to that specific time."
-        },
-        "116": {
-          "caption": "AWS::SES::ConfigurationSet",
-          "description": "A set of rules that can be applied to emails sent through Amazon SES to track and control email sending."
-        },
-        "117": {
-          "caption": "AWS::Shield::Protection",
-          "description": "A resource that provides DDoS protection for applications running on AWS against network and transport layer attacks."
-        },
-        "118": {
-          "caption": "AWS::SecurityHub::Standard",
-          "description": "A collection of security controls that help ensure compliance with security standards and best practices."
-        },
-        "119": {
-          "caption": "AWS::WAF::Rule",
-          "description": "A combination of conditions that AWS WAF searches for in web requests to allow, block, or count them."
-        },
         "12": {
           "caption": "AWS::ACM::Certificate",
           "description": "A digital certificate provided by AWS Certificate Manager for securing web applications and services."
-        },
-        "120": {
-          "caption": "AWS::WAF::RuleGroup",
-          "description": "A reusable collection of rules that can be shared across multiple AWS WAF web ACLs."
-        },
-        "121": {
-          "caption": "AWS::WAFRegional::Rule",
-          "description": "A combination of conditions that AWS WAFRegional searches for in web requests to regional resources."
-        },
-        "122": {
-          "caption": "AWS::WAFRegional::RuleGroup",
-          "description": "A reusable collection of rules for AWS WAFRegional that can be shared across multiple web ACLs."
-        },
-        "123": {
-          "caption": "AWS::WAFRegional::WebACL",
-          "description": "A web access control list that provides control over HTTP(S) requests to regional AWS resources."
-        },
-        "124": {
-          "caption": "AWS::WAFv2::RuleGroup",
-          "description": "An enhanced collection of rules in WAFv2 that can be reused across multiple web ACLs with improved capabilities."
-        },
-        "125": {
-          "caption": "AWS::XRay::EncryptionConfig",
-          "description": "A configuration that specifies encryption settings for AWS X-Ray data to enhance security and privacy."
-        },
-        "126": {
-          "caption": "Github::Code::Repository",
-          "description": "A version-controlled source code repository hosted on GitHub, allowing collaborative development and code management."
-        },
-        "127": {
-          "caption": "BitBucket::Code::Repository",
-          "description": "A version-controlled source code repository hosted on BitBucket for team collaboration and code management."
-        },
-        "128": {
-          "caption": "GitLab::Code::Repository",
-          "description": "A version-controlled source code repository hosted on GitLab, providing tools for software development lifecycle management."
         },
         "13": {
           "caption": "AWS::ACMPCA::CertificateAuthority",
@@ -230,10 +158,6 @@
         "19": {
           "caption": "AWS::Athena::DataCatalog",
           "description": "A metadata repository containing databases, tables, and data sources used for querying in Amazon Athena."
-        },
-        "2": {
-          "caption": "AWS::IAM::Policy",
-          "description": "A document that defines permissions to AWS resources and specifies what actions are allowed or denied on which resources."
         },
         "20": {
           "caption": "AWS::Athena::WorkGroup",
@@ -275,10 +199,6 @@
           "caption": "AWS::Batch::SchedulingPolicy",
           "description": "A policy that determines how jobs are scheduled across compute environments in AWS Batch."
         },
-        "3": {
-          "caption": "AWS::EC2::SecurityGroup",
-          "description": "A virtual firewall that controls inbound and outbound traffic to AWS resources and Amazon EC2 instances."
-        },
         "30": {
           "caption": "AWS::CloudFormation::Stack",
           "description": "A collection of AWS resources created and managed as a single unit through a CloudFormation template."
@@ -318,10 +238,6 @@
         "39": {
           "caption": "AWS::DMS::Certificate",
           "description": "A certificate used to encrypt connections between a replication instance and database endpoints."
-        },
-        "4": {
-          "caption": "AWS::EC2::Subnet",
-          "description": "A range of IP addresses in a VPC that can be used to isolate resources within the same network."
         },
         "40": {
           "caption": "AWS::DMS::Endpoint",
@@ -363,10 +279,6 @@
           "caption": "AWS::EC2::EIP",
           "description": "A static IPv4 address designed for dynamic cloud computing that can be associated with instances or network interfaces."
         },
-        "5": {
-          "caption": "AWS::S3::Bucket",
-          "description": "A container for storing objects (files and data) in Amazon S3 with a globally unique name across all AWS Regions."
-        },
         "50": {
           "caption": "AWS::EC2::FlowLog",
           "description": "A feature that captures information about IP traffic going to and from network interfaces in a VPC."
@@ -406,10 +318,6 @@
         "59": {
           "caption": "AWS::EC2::TransitGatewayRouteTable",
           "description": "A route table associated with a Transit Gateway that controls how traffic is directed between attachments."
-        },
-        "6": {
-          "caption": "AWS::IAM::Role",
-          "description": "An IAM identity that defines permissions for AWS services and users to assume temporarily."
         },
         "60": {
           "caption": "AWS::EC2::VPC",
@@ -451,10 +359,6 @@
           "caption": "AWS::ECS::Cluster",
           "description": "A logical grouping of container instances for running and managing container-based applications."
         },
-        "7": {
-          "caption": "AWS::RDS::DBInstance",
-          "description": "A database instance running in the AWS cloud with automated backups, patching, and monitoring capabilities."
-        },
         "70": {
           "caption": "AWS::ECS::Service",
           "description": "A configuration that maintains and scales a specified number of task instances based on a task definition."
@@ -494,10 +398,6 @@
         "79": {
           "caption": "AWS::Events::EventBus",
           "description": "A router for events that can receive events from AWS services, other AWS accounts, and custom applications."
-        },
-        "8": {
-          "caption": "AWS::EC2::Instance",
-          "description": "A virtual server in the AWS cloud with configurable compute, memory, storage, and networking capacity."
         },
         "80": {
           "caption": "AWS::GuardDuty::Detector",
@@ -539,10 +439,6 @@
           "caption": "AWS::SQS::Queue",
           "description": "A fully managed message queuing service that enables decoupling and scaling of distributed applications and microservices."
         },
-        "9": {
-          "caption": "AWS::EC2::Volume",
-          "description": "A persistent block storage volume for EC2 instances that can be attached and detached from instances as needed."
-        },
         "90": {
           "caption": "AWS::SSM::Document",
           "description": "A configuration document that defines actions Systems Manager performs on managed instances."
@@ -568,23 +464,130 @@
           "description": "A cloud-based virtual desktop that allows users to access documents, applications, and resources from supported devices."
         },
         "96": {
-          "caption": "Github::Code::Repository",
-          "description": "A version-controlled source code repository hosted on GitHub, allowing collaborative development and code management."
+          "caption": "AWS::ElasticLoadBalancing::HealthCheck",
+          "description": "A configuration that determines the health status of instances registered with a load balancer."
         },
         "97": {
-          "caption": "BitBucket::Code::Repository",
-          "description": "A version-controlled source code repository hosted on BitBucket for team collaboration and code management."
+          "caption": "AWS::ElasticLoadBalancing::Listener",
+          "description": "A process that checks for connection requests using a configured protocol and port, and forwards requests to targets."
         },
         "98": {
-          "caption": "GitLab::Code::Repository",
-          "description": "A version-controlled source code repository hosted on GitLab, providing tools for software development lifecycle management."
+          "caption": "AWS::ElasticLoadBalancing::ListenerRule",
+          "description": "A rule that defines how the load balancer routes requests to the targets in one or more target groups."
         },
         "99": {
           "caption": "Other",
           "description": "The type is not mapped. See the <code>type</code> attribute, which contains a data source specific value."
+        },
+        "100": {
+          "caption": "AWS::ElasticLoadBalancing::TargetGroup",
+          "description": "A group of targets (EC2 instances, containers, IP addresses) that receive traffic from a load balancer."
+        },
+        "101": {
+          "caption": "AWS::Account",
+          "description": "A logical container for AWS resources and services that provides consolidated billing, access control, and resource organization."
+        },
+        "102": {
+          "caption": "AWS::EventSchemas::Registry",
+          "description": "A container for event schemas in Amazon EventBridge Schema Registry, managing schema versions and access."
+        },
+        "103": {
+          "caption": "AWS::Glue::MLTransform",
+          "description": "A machine learning transformation that cleanses and transforms data automatically using machine learning algorithms."
+        },
+        "104": {
+          "caption": "AWS::GuardDuty::Filter",
+          "description": "A filter that defines which findings are included or excluded from GuardDuty results based on specified criteria."
+        },
+        "105": {
+          "caption": "AWS::GuardDuty::IPSet",
+          "description": "A list of trusted IP addresses that are used by GuardDuty to allow or identify safe communications."
+        },
+        "106": {
+          "caption": "AWS::GuardDuty::ThreatIntelSet",
+          "description": "A collection of known malicious IP addresses that GuardDuty uses to identify potentially malicious activity."
+        },
+        "107": {
+          "caption": "AWS::IoT::Thing",
+          "description": "A representation of a specific device or logical entity in AWS IoT that can connect and communicate with the AWS cloud."
+        },
+        "108": {
+          "caption": "BitBucket::Code::Repository",
+          "description": "A version-controlled source code repository hosted on BitBucket for team collaboration and code management."
+        },
+        "109": {
+          "caption": "GitLab::Code::Repository",
+          "description": "A version-controlled source code repository hosted on GitLab, providing tools for software development lifecycle management."
+        },
+        "110": {
+          "caption": "AWS::MSK::Cluster",
+          "description": "A managed Apache Kafka cluster that simplifies the setup, scaling, and management of Kafka infrastructure."
+        },
+        "111": {
+          "caption": "AWS::Macie::Session",
+          "description": "A configuration that enables Amazon Macie to discover, classify, and protect sensitive data in AWS."
+        },
+        "112": {
+          "caption": "AWS::NetworkFirewall::Firewall",
+          "description": "A stateful, managed network firewall service that filters traffic at the perimeter of a VPC."
+        },
+        "113": {
+          "caption": "AWS::NetworkFirewall::FirewallPolicy",
+          "description": "A set of rule groups and default actions that determine how a Network Firewall firewall handles traffic."
+        },
+        "114": {
+          "caption": "AWS::NetworkFirewall::RuleGroup",
+          "description": "A reusable collection of stateful or stateless rules for AWS Network Firewall that defines network traffic filtering behavior."
+        },
+        "115": {
+          "caption": "AWS::RDS::DBClusterSnapshot",
+          "description": "A point-in-time backup of an entire DB cluster that can be used to restore the cluster to that specific time."
+        },
+        "116": {
+          "caption": "AWS::SES::ConfigurationSet",
+          "description": "A set of rules that can be applied to emails sent through Amazon SES to track and control email sending."
+        },
+        "117": {
+          "caption": "AWS::Shield::Protection",
+          "description": "A resource that provides DDoS protection for applications running on AWS against network and transport layer attacks."
+        },
+        "118": {
+          "caption": "AWS::SecurityHub::Standard",
+          "description": "A collection of security controls that help ensure compliance with security standards and best practices."
+        },
+        "119": {
+          "caption": "AWS::WAF::Rule",
+          "description": "A combination of conditions that AWS WAF searches for in web requests to allow, block, or count them."
+        },
+        "120": {
+          "caption": "AWS::WAF::RuleGroup",
+          "description": "A reusable collection of rules that can be shared across multiple AWS WAF web ACLs."
+        },
+        "121": {
+          "caption": "AWS::WAFRegional::Rule",
+          "description": "A combination of conditions that AWS WAFRegional searches for in web requests to regional resources."
+        },
+        "122": {
+          "caption": "AWS::WAFRegional::RuleGroup",
+          "description": "A reusable collection of rules for AWS WAFRegional that can be shared across multiple web ACLs."
+        },
+        "123": {
+          "caption": "AWS::WAFRegional::WebACL",
+          "description": "A web access control list that provides control over HTTP(S) requests to regional AWS resources."
+        },
+        "124": {
+          "caption": "AWS::WAFv2::RuleGroup",
+          "description": "An enhanced collection of rules in WAFv2 that can be reused across multiple web ACLs with improved capabilities."
+        },
+        "125": {
+          "caption": "AWS::XRay::EncryptionConfig",
+          "description": "A configuration that specifies encryption settings for AWS X-Ray data to enhance security and privacy."
+        },
+        "126": {
+          "caption": "Github::Code::Repository",
+          "description": "A version-controlled source code repository hosted on GitHub, allowing collaborative development and code management."
         }
-      },
-      "profile": "aws/aws_resources"
+      }
     },
     "uid": {
       "description": "The resource unique identifier <code>(e.g. i-1234567890abcdef0)</code>.",
@@ -592,22 +595,20 @@
     },
     "uid_alt": {
       "description": "This is the Amazon Resource Name (ARN) of the resource.",
-      "requirement": "optional"
+      "requirement": "recommended"
     },
     "user": {
-      "requirement": "optional",
-      "profile": "aws/aws_resources"
+      "profile": "aws/aws_resources",
+      "requirement": "optional"
     },
     "vpc_uid": {
       "description": "The VPC ID where the resource is located <code>(e.g. vpc-12345678900)</code>.",
-      "requirement": "recommended",
-      "profile": "aws/aws_resources"
-    },
-    "$include": [
-      "profiles/aws_resources.json"
-    ]
+      "profile": "aws/aws_resources",
+      "requirement": "recommended"
+    }
   },
-  "profiles": [
-    "aws/aws_resources"
-  ]
+  "constraints": {
+    "at_least_one": ["name", "uid", "uid_alt"]
+  },
+  "profiles": ["aws/aws_resources"]
 }

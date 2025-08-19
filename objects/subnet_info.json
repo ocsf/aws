@@ -21,7 +21,19 @@
       "requirement": "recommended"
     },
     "state": {
-      "description": "The current state of the subnet <code>(e.g. avalible)</code>",
+      "description": "The current state of the subnet <code>(e.g. available)</code>.",
+      "requirement": "recommended"
+    },
+    "name": {
+      "description": "The name of the subnet.",
+      "requirement": "recommended"
+    },
+    "uid": {
+      "description": "The unique identifier of the subnet.",
+      "requirement": "recommended"
+    },
+    "uid_alt": {
+      "description": "This is the Amazon Resource Name (ARN) of the resource.",
       "requirement": "recommended"
     },
     "vpc_uid": {
@@ -29,9 +41,18 @@
       "requirement": "recommended"
     },
     "zone": {
-      "caption": "Avaliblity Zone",
+      "caption": "Availability Zone",
       "description": "The Availability Zone of the subnet.",
       "requirement": "recommended"
     }
-  }
+  },
+  "constraints": {
+    "at_least_one": ["name", "uid", "uid_alt"]
+  },
+  "references": [
+    {
+      "description": "AWS Subnets for your VPC",
+      "url": "https://docs.aws.amazon.com/vpc/latest/userguide/configure-subnets.html"
+    }
+  ]
 }

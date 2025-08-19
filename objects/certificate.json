@@ -5,7 +5,7 @@
   "name": "certificate",
   "attributes": {
     "algorithm": {
-      "description": "The algorithm of the certificate <code>(e.g RSA-1024)</code>. ",
+      "description": "The algorithm of the certificate <code>(e.g RSA-1024)</code>.",
       "requirement": "recommended"
     },
     "domain": {
@@ -13,18 +13,18 @@
       "requirement": "recommended"
     },
     "imported_time": {
-      "description": "The timestamp of when the certificate was imported. ",
+      "description": "The timestamp of when the certificate was imported.",
       "requirement": "recommended"
     },
     "in_use_by": {
-      "description": "List of resource ARNs where the certificate is in use. ",
+      "description": "List of resource ARNs where the certificate is in use.",
       "requirement": "recommended"
     },
     "key_usages": {
       "requirement": "recommended"
     },
     "renewable_eligibility": {
-      "description": "Whether the certificate is eligible for renewal <code>(e.g. ELIGIBLE)</code>. ",
+      "description": "Whether the certificate is eligible for renewal <code>(e.g. ELIGIBLE)</code>.",
       "requirement": "recommended"
     },
     "source": {
@@ -33,8 +33,21 @@
       "requirement": "recommended"
     },
     "state": {
-      "description": "The state of the certificate <code>(e.g. ISSUED)</code>. ",
+      "description": "The state of the certificate <code>(e.g. ISSUED)</code>.",
+      "requirement": "recommended"
+    },
+    "uid_alt": {
+      "description": "This is the Amazon Resource Name (ARN) of the resource.",
       "requirement": "recommended"
     }
-  }
+  },
+  "constraints": {
+    "at_least_one": ["name", "uid", "uid_alt"]
+  },
+  "references": [
+    {
+      "description": "AWS Certificate Manager",
+      "url": "https://aws.amazon.com/certificate-manager/"
+    }
+  ]
 }

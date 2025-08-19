@@ -13,7 +13,7 @@
       "requirement": "recommended"
     },
     "encryption_details": {
-      "description": "The database encryption details",
+      "description": "The database encryption details.",
       "requirement": "recommended"
     },
     "engine": {
@@ -36,12 +36,12 @@
       "description": "The database port number (e.g. 3306).",
       "requirement": "optional"
     },
-    "security_group_uids": {
-      "description": "The list of VPC security groups associated with the database instance. <code>(e.g. [sg-085912345678492fb]</code>",
+    "security_groups": {
+      "description": "Array of VPC security groups associated with the database instance.",
       "requirement": "recommended"
     },
     "snapshot_details": {
-      "description": "The database snapshot details",
+      "description": "The database snapshot details.",
       "requirement": "optional"
     },
     "status": {
@@ -49,8 +49,12 @@
       "requirement": "recommended"
     },
     "subnet_group": {
-      "description": "A database subnet group is a collection of subnets in a VPC designated for your database instance",
+      "description": "A database subnet group is a collection of subnets in a VPC designated for your database instance.",
       "requirement": "optional"
+    },
+    "uid_alt": {
+      "description": "This is the Amazon Resource Name (ARN) of the resource.",
+      "requirement": "recommended"
     },
     "user": {
       "description": "The database user (e.g. admin).",
@@ -60,5 +64,14 @@
       "description": "The database version (e.g. 5.7.38).",
       "requirement": "optional"
     }
-  }
+  },
+  "constraints": {
+    "at_least_one": ["name", "uid", "uid_alt"]
+  },
+  "references": [
+    {
+      "description": "AWS Databases",
+      "url": "https://docs.aws.amazon.com/AmazonRDS/latest/gettingstartedguide/what-is-rds.html"
+    }
+  ]
 }

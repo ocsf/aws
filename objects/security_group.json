@@ -1,0 +1,29 @@
+{
+  "caption": "Security Group",
+  "description": "A security group controls the traffic that is allowed to reach and leave the resources that it is associated with.",
+  "extends": "_entity",
+  "name": "security_group",
+  "attributes": {
+    "name": {
+      "description": "The name of the security group <code> \"MyTestSecurityGroup\" </code>.",
+      "requirement": "recommended"
+    },
+    "uid": {
+      "description": "The UID of the security group <code> \"sg-0746d221786497bc8\" </code>.",
+      "requirement": "recommended"
+    },
+    "uid_alt": {
+      "description": "This is the Amazon Resource Name (ARN) of the resource.",
+      "requirement": "optional"
+    }
+  },
+  "constraints": {
+    "at_least_one": ["name", "uid", "uid_alt"]
+  },
+  "references": [
+    {
+      "description": "AWS Security Groups",
+      "url": "https://docs.aws.amazon.com/vpc/latest/userguide/vpc-security-groups.html"
+    }
+  ]
+}

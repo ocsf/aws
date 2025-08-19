@@ -7,6 +7,19 @@
     "type": {
       "description": "The policy type. For example: <code>Identity Policy, Resource Policy, Service Control Policy, etc.</code>.",
       "requirement": "optional"
+    },
+    "uid_alt": {
+      "description": "This is the Amazon Resource Name (ARN) of the resource.",
+      "requirement": "recommended"
     }
-  }
+  },
+  "constraints": {
+    "at_least_one": ["name", "type", "uid", "uid_alt"]
+  },
+  "references": [
+    {
+      "description": "AWS IAM Policies",
+      "url": "https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_managed-vs-inline.html"
+    }
+  ]
 }

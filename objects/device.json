@@ -18,6 +18,10 @@
     "launch_time": {
       "description": "The time the instance was launched.",
       "requirement": "recommended"
+    },
+    "uid_alt": {
+      "description": "This is the Amazon Resource Name (ARN) of the resource.",
+      "requirement": "recommended"
     }
   }
 }
