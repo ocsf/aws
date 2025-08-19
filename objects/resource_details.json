@@ -70,7 +70,6 @@
     },
     "type": {
       "description": "The resource type <code>(e.g. AWS::EC2::Instance)</code>.",
-      "profile": "aws/aws_resources",
       "requirement": "required"
     },
     "type_id": {
