@@ -1,0 +1,8 @@
+{
+  "caption": "Cloud Resources",
+  "description": "This profile is used to embellish the framework with attributes that help represent resources in cloud environments. E.g AWS EC2, GCP Compute Engine, Azure VMs",
+  "meta": "profile",
+  "name": "cloud_resources",
+  "attributes": {
+  }
+}
