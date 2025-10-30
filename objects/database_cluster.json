@@ -34,7 +34,7 @@
     },
     "is_encrypted": {
       "description": "Whether the database cluster is encrypted (e.g. true).",
-      "requirement": "required"
+      "requirement": "recommended"
     },
     "is_iam_authentication": {
       "description": "Whether IAM authentication is enabled (e.g. true).",

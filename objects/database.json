@@ -22,7 +22,7 @@
     },
     "is_encrypted": {
       "description": "Whether the database is encrypted (e.g. true).",
-      "requirement": "required"
+      "requirement": "recommended"
     },
     "is_iam_authentication": {
       "description": "Whether IAM authentication is enabled (e.g. true).",
@@ -30,7 +30,7 @@
     },
     "is_public": {
       "description": "Whether the database is publicly accessible (e.g. true).",
-      "requirement": "required"
+      "requirement": "recommended"
     },
     "port": {
       "description": "The database port number (e.g. 3306).",

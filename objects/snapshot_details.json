@@ -18,7 +18,7 @@
     },
     "is_encrypted": {
       "description": "Whether the snapshot is encrypted <code>(e.g. TRUE)</code>.",
-      "requirement": "required"
+      "requirement": "recommended"
     },
     "type": {
       "description": "The type of the snapshot.",

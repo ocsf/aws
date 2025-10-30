@@ -10,7 +10,7 @@
     },
     "instance_uid": {
       "description": "The unique identifier of the resource that the attachment is attached to <code>(e.g. i-1234567890abcdef0)</code>.",
-      "requirement": "required"
+      "requirement": "recommended"
     },
     "is_delete_on_termination": {
       "description": "Boolean flag indicating if the attachment should be automatically deleted when the instance is terminated.",
