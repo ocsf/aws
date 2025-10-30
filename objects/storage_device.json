@@ -22,7 +22,7 @@
     },
     "is_encrypted": {
       "description": "Whether the storage device is encrypted <code>(e.g. true)</code>.",
-      "requirement": "required"
+      "requirement": "recommended"
     },
     "snapshot_id": {
       "description": "The storage device snapshot identifier <code>(e.g. snap-1234567890abcdef0).</code>",
