@@ -14,7 +14,7 @@
     },
     "state": {
       "description": "The state of the subnet group.",
-      "requirement": "required"
+      "requirement": "recommended"
     },
     "subnet_info_list": {
       "description": "The list of subnets that belong to the subnet group.",
