@@ -1,0 +1,45 @@
+{
+  "caption": "Guardrail Evaluation Result",
+  "description": "The Guardrail Evaluation Result object describes the aggregate outcome of an AI guardrail evaluation, including the source of content evaluated and the combined content policy filter results across all guardrails that assessed the request.",
+  "extends": "object",
+  "name": "guardrail_evaluation_result",
+  "attributes": {
+    "content_policy_filters": {
+      "description": "The aggregate content policy filter results from the guardrail evaluation, combined across all guardrails that assessed the request.",
+      "requirement": "optional"
+    },
+    "source": {
+      "description": "The source of data evaluated by the guardrail, normalized to the caption of the <code>source_id</code> value. In the case of 'Other', it is defined by the event source.",
+      "requirement": "optional"
+    },
+    "source_id": {
+      "description": "The normalized identifier for the source of data evaluated by the guardrail.",
+      "requirement": "recommended",
+      "sibling": "source",
+      "enum": {
+        "0": {
+          "caption": "Unknown",
+          "description": "The guardrail source is unknown."
+        },
+        "1": {
+          "caption": "Input",
+          "description": "The guardrail evaluated the input content (e.g., user prompt)."
+        },
+        "2": {
+          "caption": "Output",
+          "description": "The guardrail evaluated the output content (e.g., model response)."
+        },
+        "99": {
+          "caption": "Other",
+          "description": "The guardrail source is not mapped. See the <code>source</code> attribute, which contains a data source specific value."
+        }
+      }
+    }
+  },
+  "references": [
+    {
+      "description": "Amazon Bedrock ApplyGuardrail API",
+      "url": "https://docs.aws.amazon.com/bedrock/latest/APIReference/API_runtime_ApplyGuardrail.html"
+    }
+  ]
+}

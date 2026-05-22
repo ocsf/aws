@@ -1,0 +1,15 @@
+{
+  "caption": "Remediation",
+  "extends": "remediation",
+  "name": "remediation",
+  "attributes": {
+    "is_immediate": {
+      "description": "Indicates whether the remediation fix takes effect immediately upon application, or requires additional rollout steps such as redeployment of affected resources.",
+      "requirement": "optional"
+    },
+    "post_remediation_steps": {
+      "description": "An ordered list of follow-up remediation steps to perform after the primary fix is applied, such as redeploying affected instances or rotating credentials.",
+      "requirement": "optional"
+    }
+  }
+}

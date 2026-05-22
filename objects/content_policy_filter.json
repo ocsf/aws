@@ -1,0 +1,119 @@
+{
+  "caption": "Content Policy Filter",
+  "description": "The Content Policy Filter object describes the result of a content policy filter evaluation by an AI guardrail. Each filter assesses content against a specific category (e.g., hate speech, violence) and reports a confidence level and action taken.",
+  "extends": "object",
+  "name": "content_policy_filter",
+  "attributes": {
+    "action": {
+      "description": "The action taken by the content filter, normalized to the caption of the <code>action_id</code> value. In the case of 'Other', it is defined by the event source.",
+      "requirement": "optional"
+    },
+    "action_id": {
+      "description": "The normalized action taken by the content filter.",
+      "requirement": "required",
+      "sibling": "action",
+      "enum": {
+        "0": {
+          "caption": "Unknown",
+          "description": "The action is unknown."
+        },
+        "1": {
+          "caption": "None",
+          "description": "No action was taken. The content was allowed to pass through."
+        },
+        "2": {
+          "caption": "Blocked",
+          "description": "The content was blocked by the guardrail."
+        },
+        "99": {
+          "caption": "Other",
+          "description": "The action is not mapped. See the <code>action</code> attribute, which contains a data source specific value."
+        }
+      }
+    },
+    "confidence": {
+      "description": "The confidence level of the filter detection, normalized to the caption of the <code>confidence_id</code> value. In the case of 'Other', it is defined by the event source.",
+      "requirement": "optional"
+    },
+    "confidence_id": {
+      "description": "The normalized confidence level of the content filter detection.",
+      "requirement": "required",
+      "sibling": "confidence",
+      "enum": {
+        "0": {
+          "caption": "Unknown",
+          "description": "The confidence level is unknown."
+        },
+        "1": {
+          "caption": "None",
+          "description": "No confidence. The content was not detected as matching this filter category."
+        },
+        "2": {
+          "caption": "Low",
+          "description": "Low confidence that the content matches this filter category."
+        },
+        "3": {
+          "caption": "Medium",
+          "description": "Medium confidence that the content matches this filter category."
+        },
+        "4": {
+          "caption": "High",
+          "description": "High confidence that the content matches this filter category."
+        },
+        "99": {
+          "caption": "Other",
+          "description": "The confidence level is not mapped. See the <code>confidence</code> attribute, which contains a data source specific value."
+        }
+      }
+    },
+    "type": {
+      "description": "The content filter type, normalized to the caption of the <code>type_id</code> value. In the case of 'Other', it is defined by the event source.",
+      "requirement": "optional"
+    },
+    "type_id": {
+      "description": "The normalized content filter type identifier.",
+      "requirement": "required",
+      "sibling": "type",
+      "enum": {
+        "0": {
+          "caption": "Unknown",
+          "description": "The content filter type is unknown."
+        },
+        "1": {
+          "caption": "Insults",
+          "description": "Content that contains insulting language."
+        },
+        "2": {
+          "caption": "Hate",
+          "description": "Content that contains hate speech."
+        },
+        "3": {
+          "caption": "Sexual",
+          "description": "Content that contains sexual material."
+        },
+        "4": {
+          "caption": "Violence",
+          "description": "Content that contains violent material."
+        },
+        "5": {
+          "caption": "Misconduct",
+          "description": "Content that describes or promotes misconduct."
+        },
+        "6": {
+          "caption": "Prompt Attack",
+          "description": "Content that contains a prompt injection or jailbreak attempt."
+        },
+        "99": {
+          "caption": "Other",
+          "description": "The content filter type is not mapped. See the <code>type</code> attribute, which contains a data source specific value."
+        }
+      }
+    }
+  },
+  "references": [
+    {
+      "description": "Amazon Bedrock Guardrail Content Filter",
+      "url": "https://docs.aws.amazon.com/bedrock/latest/APIReference/API_runtime_GuardrailContentFilter.html"
+    }
+  ]
+}

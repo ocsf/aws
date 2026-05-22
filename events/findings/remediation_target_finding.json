@@ -1,0 +1,46 @@
+{
+  "uid": 1,
+  "caption": "Remediation Target Finding",
+  "description": "A Remediation Target Finding identifies a resource that, when remediated, will resolve or reduce the severity of one or more findings. It groups findings by their common remediation target and provides aggregate impact predictions. This finding does not discover security gaps — it processes already known gaps and identifies the most impactful resource to fix.",
+  "extends": "finding",
+  "name": "remediation_target_finding",
+  "attributes": {
+    "activity_id": {
+      "enum": {
+        "1": {
+          "caption": "Create",
+          "description": "A new remediation target finding was created."
+        },
+        "2": {
+          "caption": "Update",
+          "description": "An existing remediation target finding was updated with new data."
+        },
+        "3": {
+          "caption": "Close",
+          "description": "A remediation target finding was closed because the remediation target is no longer relevant."
+        }
+      }
+    },
+    "remediation": {
+      "description": "Remediation guidance for the target resource, including description, knowledge base articles, whether the fix is immediate, and any post-remediation follow-up steps.",
+      "group": "primary",
+      "requirement": "recommended"
+    },
+    "remediation_outcome": {
+      "description": "The aggregate outcome of remediating this target, including counts of resolved, severity-reduced, and unchanged findings, and per-finding before/after detail.",
+      "group": "primary",
+      "requirement": "required"
+    },
+    "resources": {
+      "caption": "Target Resources",
+      "description": "The resources that are the target of remediation. Fixing these resources will resolve or reduce the severity of the grouped findings.",
+      "group": "context",
+      "requirement": "recommended"
+    },
+    "target_trait": {
+      "description": "The security trait that this remediation target addresses. One remediation target finding is generated per resource type and trait combination.",
+      "group": "primary",
+      "requirement": "required"
+    }
+  }
+}

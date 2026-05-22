@@ -1,0 +1,16 @@
+{
+  "caption": "Adjusted Metric",
+  "description": "The Adjusted Metric object describes a single CVSS environmental metric modification applied by a security product, including the metric that was changed and the reason for the change.",
+  "extends": "object",
+  "name": "adjusted_metric",
+  "attributes": {
+    "cvss_metric": {
+      "description": "The CVSS environmental metric that was modified. Values correspond to CVSS v3.x/v4.0 environmental metric abbreviations (e.g. <code>MAV</code>, <code>MAC</code>, <code>MPR</code>, <code>MUI</code>, <code>MS</code>, <code>MC</code>, <code>MI</code>, <code>MA</code>).",
+      "requirement": "recommended"
+    },
+    "update_reason": {
+      "description": "The reason the CVSS metric was modified (e.g. <code>There is no path from the internet to this instance</code>).",
+      "requirement": "recommended"
+    }
+  }
+}

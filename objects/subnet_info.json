@@ -20,12 +20,12 @@
       "description": "Indicates whether instances launched in this subnet receive a public IP address.",
       "requirement": "recommended"
     },
-    "state": {
-      "description": "The current state of the subnet <code>(e.g. available)</code>.",
-      "requirement": "recommended"
-    },
     "name": {
       "description": "The name of the subnet.",
+      "requirement": "recommended"
+    },
+    "state": {
+      "description": "The current state of the subnet <code>(e.g. available)</code>.",
       "requirement": "recommended"
     },
     "uid": {
@@ -47,7 +47,11 @@
     }
   },
   "constraints": {
-    "at_least_one": ["name", "uid", "uid_alt"]
+    "at_least_one": [
+      "name",
+      "uid",
+      "uid_alt"
+    ]
   },
   "references": [
     {

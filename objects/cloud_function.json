@@ -4,18 +4,6 @@
   "extends": "_entity",
   "name": "cloud_function",
   "attributes": {
-    "name": {
-      "description": "The name of the cloud function <code>(e.g. my-cloud-function)</code>.",
-      "requirement": "recommended"
-    },
-    "uid": {
-      "description": "The unique identifier of the cloud function <code>(e.g. my-cloud-function)</code>.",
-      "requirement": "recommended"
-    },
-    "uid_alt": {
-      "description": "This is the Amazon Resource Name (ARN) of the resource.",
-      "requirement": "recommended"
-    },
     "encryption_details": {
       "description": "The cloud function encryption details <code>(e.g. arn:aws:kms:us-west-2:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab)</code>.",
       "requirement": "recommended"
@@ -28,6 +16,10 @@
       "description": "The list of cloud function layers that contain supplementary code or data.",
       "requirement": "optional"
     },
+    "name": {
+      "description": "The name of the cloud function <code>(e.g. my-cloud-function)</code>.",
+      "requirement": "recommended"
+    },
     "runtime": {
       "description": "The cloud function language-specific environment <code>(e.g. Node.js, Python,Java, Ruby)</code>.",
       "requirement": "optional"
@@ -38,6 +30,14 @@
     },
     "subnet_info_list": {
       "description": "The details about subnets associated with the cloud function <code>(e.g. [\"subnet-071f712345678e7c8\", \"subnet-07fd123456788a036\"])</code>.",
+      "requirement": "recommended"
+    },
+    "uid": {
+      "description": "The unique identifier of the cloud function <code>(e.g. my-cloud-function)</code>.",
+      "requirement": "recommended"
+    },
+    "uid_alt": {
+      "description": "This is the Amazon Resource Name (ARN) of the resource.",
       "requirement": "recommended"
     },
     "user": {
@@ -54,7 +54,11 @@
     }
   },
   "constraints": {
-    "at_least_one": ["name", "uid", "uid_alt"]
+    "at_least_one": [
+      "name",
+      "uid",
+      "uid_alt"
+    ]
   },
   "references": [
     {

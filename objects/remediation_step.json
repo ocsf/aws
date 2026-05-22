@@ -1,0 +1,16 @@
+{
+  "caption": "Remediation Step",
+  "description": "The Remediation Step object describes a single follow-up action to perform after a primary remediation fix is applied, such as redeploying affected instances or rotating credentials.",
+  "extends": "object",
+  "name": "remediation_step",
+  "attributes": {
+    "desc": {
+      "description": "A human-readable description of the remediation step.",
+      "requirement": "required"
+    },
+    "kb_article_list": {
+      "description": "A list of knowledge base article references relevant to this remediation step.",
+      "requirement": "optional"
+    }
+  }
+}

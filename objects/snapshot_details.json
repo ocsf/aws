@@ -4,10 +4,6 @@
   "extends": "_entity",
   "name": "snapshot_details",
   "attributes": {
-    "name": {
-      "description": "The name of the snapshot.",
-      "requirement": "recommended"
-    },
     "created_time": {
       "description": "When the snapshot was taken in Coordinated Universal Time (UTC).",
       "requirement": "optional"
@@ -18,6 +14,10 @@
     },
     "is_encrypted": {
       "description": "Whether the snapshot is encrypted <code>(e.g. TRUE)</code>.",
+      "requirement": "recommended"
+    },
+    "name": {
+      "description": "The name of the snapshot.",
       "requirement": "recommended"
     },
     "type": {
@@ -34,6 +34,10 @@
     }
   },
   "constraints": {
-    "at_least_one": ["name", "uid", "uid_alt"]
+    "at_least_one": [
+      "name",
+      "uid",
+      "uid_alt"
+    ]
   }
 }

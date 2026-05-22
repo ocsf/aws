@@ -1,0 +1,74 @@
+{
+  "caption": "Port Scan Result",
+  "description": "The Port Scan Result object describes the outcome of a network port scan probe against a single port on a target host, including the scanned port details, probe status, and identified service.",
+  "extends": "object",
+  "name": "port_scan_result",
+  "attributes": {
+    "http_response": {
+      "description": "The HTTP response received from the scanned port, including response headers, status code, and content type. Populated when the scanned port responds to an HTTP probe.",
+      "requirement": "optional"
+    },
+    "port_info": {
+      "description": "The scanned port and transport protocol details for this probe.",
+      "requirement": "required"
+    },
+    "status": {
+      "requirement": "optional"
+    },
+    "status_id": {
+      "description": "The normalized status of the port scan probe.",
+      "requirement": "recommended",
+      "sibling": "status",
+      "enum": {
+        "0": {
+          "caption": "Unknown",
+          "description": "The port scan probe status is unknown."
+        },
+        "1": {
+          "caption": "Open",
+          "description": "The port accepted a connection or responded to the probe, indicating a listening service."
+        },
+        "2": {
+          "caption": "Closed",
+          "description": "The port actively refused the connection (e.g., TCP RST), confirming host reachability but absence of a listening service."
+        },
+        "3": {
+          "caption": "Filtered",
+          "description": "The port did not respond or was blocked by a firewall, leaving the service state ambiguous."
+        },
+        "4": {
+          "caption": "Scan Failed",
+          "description": "The probe could not be completed due to a scanner error."
+        },
+        "5": {
+          "caption": "Unfiltered",
+          "description": "The port responded to the probe (e.g., TCP ACK scan) but the scanner cannot determine whether a service is listening."
+        },
+        "6": {
+          "caption": "Open|Filtered",
+          "description": "The scanner cannot determine whether the port is open or filtered (common with UDP, FIN, NULL, and XMAS scans)."
+        },
+        "7": {
+          "caption": "Closed|Filtered",
+          "description": "The scanner cannot determine whether the port is closed or filtered (e.g., IP ID idle scan)."
+        },
+        "99": {
+          "caption": "Other",
+          "description": "The probe status is not mapped. See the <code>status</code> attribute, which contains a data source specific value."
+        }
+      }
+    },
+    "svc_name": {
+      "description": "The application-layer service identified on the scanned port, such as <code>ssh</code>, <code>http</code>, or <code>https</code>.",
+      "requirement": "optional"
+    },
+    "tcp_banner": {
+      "description": "A sanitized snippet of the service banner received from the scanned port over TCP, such as an SSH greeting, SMTP 220 response, or FTP welcome message.",
+      "requirement": "optional"
+    },
+    "tls": {
+      "description": "The TLS context negotiated during the scan probe, including the server certificate, cipher suite, protocol version, and SNI. Populated when the scanned port is running a TLS-enabled service such as HTTPS or SMTPS.",
+      "requirement": "optional"
+    }
+  }
+}
