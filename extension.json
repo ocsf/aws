@@ -3,5 +3,5 @@
   "caption": "AWS",
   "description": "The AWS extension to OCSF adds AWS-specific event classes, objects, attributes, and profiles to the core OCSF schema.",
   "name": "aws",
-  "version": "1.1.0"
+  "version": "1.2.0-dev"
 }
