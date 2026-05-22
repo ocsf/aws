@@ -1,0 +1,18 @@
+{
+  "extends": "detection_finding",
+  "name": "detection_finding",
+  "attributes": {
+    "guardrail_evaluation_result": {
+      "group": "context",
+      "requirement": "optional"
+    },
+    "likelihood": {
+      "group": "context",
+      "requirement": "optional"
+    },
+    "likelihood_id": {
+      "group": "context",
+      "requirement": "optional"
+    }
+  }
+}

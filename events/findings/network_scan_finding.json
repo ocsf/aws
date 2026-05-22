@@ -1,0 +1,41 @@
+{
+  "uid": 2,
+  "caption": "Network Scan Finding",
+  "description": "A Network Scan Finding reports the lifecycle of a network scan finding. Each finding carries scan probe results and scan job metadata, and supports Create, Update, and Close activities for finding lifecycle tracking.",
+  "extends": "finding",
+  "name": "network_scan_finding",
+  "attributes": {
+    "activity_id": {
+      "enum": {
+        "1": {
+          "caption": "Create",
+          "description": "A new network scan finding was created based on initial scan results."
+        },
+        "2": {
+          "caption": "Update",
+          "description": "An existing network scan finding was updated with new scan results."
+        },
+        "3": {
+          "caption": "Close",
+          "description": "A network scan finding was closed because the condition is no longer detected."
+        }
+      }
+    },
+    "network_scan_info": {
+      "description": "The metadata about the network scan job that produced this finding, including scan timestamps, completion status, scanner endpoints, and operational flags.",
+      "group": "primary",
+      "requirement": "required"
+    },
+    "port_scan_result_list": {
+      "description": "The per-port scan probe results for the target host, each containing port details, probe status, and identified service. For Close activities, producers must populate this field with the last-known scan results that triggered the finding.",
+      "group": "primary",
+      "requirement": "recommended"
+    },
+    "resources": {
+      "caption": "Scanned Resources",
+      "description": "The resources that were the target of the network scan, such as EC2 instances, Elastic IPs, or load balancers.",
+      "group": "context",
+      "requirement": "recommended"
+    }
+  }
+}
