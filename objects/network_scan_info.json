@@ -1,0 +1,103 @@
+{
+  "caption": "Network Scan Info",
+  "description": "The Network Scan Info object describes metadata about a network scan job, including the scan technique, duration, completion status, the scanner source endpoint, and any operational flags.",
+  "extends": "_entity",
+  "name": "network_scan_info",
+  "attributes": {
+    "flags": {
+      "description": "A list of scanner-specific operational flags for the network scan job, such as <code>service_detection</code>, <code>os_detection</code>, or <code>aggressive_timing</code>. The primary scan technique should be captured in <code>type_id</code>.",
+      "requirement": "optional"
+    },
+    "scan_duration": {
+      "description": "The time span of the network scan job, including start time, end time, and total duration.",
+      "requirement": "optional"
+    },
+    "scanner_endpoint": {
+      "description": "The network endpoint of the scanner source that executed the scan probes.",
+      "requirement": "optional"
+    },
+    "status": {
+      "requirement": "optional"
+    },
+    "status_id": {
+      "description": "The normalized completion status of the network scan job.",
+      "requirement": "recommended",
+      "sibling": "status",
+      "enum": {
+        "0": {
+          "caption": "Unknown",
+          "description": "The network scan completion status is unknown."
+        },
+        "1": {
+          "caption": "Completed",
+          "description": "The network scan completed successfully and all targets were probed."
+        },
+        "2": {
+          "caption": "Partial",
+          "description": "The network scan completed but only a subset of targets were probed."
+        },
+        "3": {
+          "caption": "Failed",
+          "description": "The network scan failed and no usable results were produced."
+        },
+        "99": {
+          "caption": "Other",
+          "description": "The network scan status is not mapped. See the <code>status</code> attribute, which contains a data source specific value."
+        }
+      }
+    },
+    "type": {
+      "description": "The network scan technique, normalized to the caption of the type_id value. In the case of 'Other', it is defined by the scanner.",
+      "requirement": "optional"
+    },
+    "type_id": {
+      "description": "The normalized identifier of the network scan technique used.",
+      "requirement": "recommended",
+      "sibling": "type",
+      "enum": {
+        "0": {
+          "caption": "Unknown",
+          "description": "The scan technique is unknown."
+        },
+        "1": {
+          "caption": "TCP SYN",
+          "description": "A half-open TCP SYN scan that sends a SYN packet and checks for a SYN-ACK response without completing the handshake."
+        },
+        "2": {
+          "caption": "TCP Connect",
+          "description": "A full TCP connect scan that completes the three-way handshake to determine port reachability."
+        },
+        "3": {
+          "caption": "UDP",
+          "description": "A UDP scan that sends UDP packets and infers port state from ICMP responses or lack thereof."
+        },
+        "4": {
+          "caption": "TCP ACK",
+          "description": "A TCP ACK scan used to map firewall rulesets by determining whether ports are filtered."
+        },
+        "5": {
+          "caption": "TCP FIN",
+          "description": "A TCP FIN scan that sends FIN packets to probe ports, exploiting a subtlety in the TCP RFC to distinguish open from closed ports."
+        },
+        "6": {
+          "caption": "TCP NULL",
+          "description": "A TCP NULL scan that sends packets with no TCP flags set to probe ports."
+        },
+        "7": {
+          "caption": "TCP XMAS",
+          "description": "A TCP XMAS scan that sends packets with FIN, PSH, and URG flags set to probe ports."
+        },
+        "99": {
+          "caption": "Other",
+          "description": "The scan technique is not mapped. See the <code>type</code> attribute, which contains a data source specific value."
+        }
+      }
+    }
+  },
+  "references": [
+    {
+      "description": "Nmap Port Scanning Techniques",
+      "url": "https://nmap.org/book/man-port-scanning-techniques.html"
+    }
+  ]
+}

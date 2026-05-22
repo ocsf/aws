@@ -1,0 +1,20 @@
+{
+  "caption": "CVSS Score",
+  "description": "Extends the core CVSS Score object with fields for vendor-computed score adjustments. Allows a security product to record environmental modifications applied to the original CVSS score, including the adjusted score, modified vector string, and the specific metrics that were changed.",
+  "extends": "cvss",
+  "name": "cvss",
+  "attributes": {
+    "adjusted_metric_list": {
+      "description": "A list of CVSS environmental metrics that were modified by the vendor, including the metric name and the reason for the modification.",
+      "requirement": "optional"
+    },
+    "adjusted_score": {
+      "description": "The recalculated CVSS score after environmental modifications are applied by the vendor (e.g. Inspector adjusting for network reachability).",
+      "requirement": "optional"
+    },
+    "adjusted_vector_string": {
+      "description": "The modified CVSS scoring vector with environmental metrics appended (e.g. the original vector with <code>/MAV:L</code> added by the vendor).",
+      "requirement": "optional"
+    }
+  }
+}

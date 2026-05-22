@@ -1,0 +1,36 @@
+{
+  "caption": "Contributing Finding",
+  "description": "The Contributing Finding object describes the current and projected state of an individual finding that is affected by a remediation target, including severity and trait changes.",
+  "extends": "object",
+  "name": "contributing_finding",
+  "attributes": {
+    "severity": {
+      "description": "The severity of the finding in its current state, normalized to the caption of the <code>severity_id</code> value.",
+      "requirement": "optional"
+    },
+    "severity_id": {
+      "description": "The normalized severity identifier of the finding in its current state.",
+      "requirement": "recommended"
+    },
+    "traits": {
+      "description": "The security traits associated with the finding in its current state.",
+      "requirement": "optional"
+    },
+    "uid": {
+      "description": "The unique identifier of the finding.",
+      "requirement": "required"
+    },
+    "updated_severity": {
+      "description": "The projected severity of the finding after remediation, normalized to the caption of the <code>updated_severity_id</code> value.",
+      "requirement": "optional"
+    },
+    "updated_severity_id": {
+      "description": "The projected normalized severity identifier of the finding after remediation.",
+      "requirement": "recommended"
+    },
+    "updated_traits": {
+      "description": "The projected security traits that will remain on the finding after remediation.",
+      "requirement": "optional"
+    }
+  }
+}

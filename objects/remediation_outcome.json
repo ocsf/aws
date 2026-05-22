@@ -1,0 +1,24 @@
+{
+  "caption": "Remediation Outcome",
+  "description": "The Remediation Outcome object describes the aggregate outcome of remediating a target resource, including counts of resolved, severity-reduced, and unchanged findings, and per-finding before/after detail.",
+  "extends": "object",
+  "name": "remediation_outcome",
+  "attributes": {
+    "contributing_findings": {
+      "description": "The per-finding detail showing the current and projected state for each contributing finding.",
+      "requirement": "recommended"
+    },
+    "resolved_findings_count": {
+      "description": "The number of findings that will be fully resolved by remediating this target.",
+      "requirement": "required"
+    },
+    "severity_reduction_findings_count": {
+      "description": "The number of findings that will have reduced severity after remediating this target.",
+      "requirement": "required"
+    },
+    "severity_unchanged_findings_count": {
+      "description": "The number of findings that will remain at the same severity after remediating this target.",
+      "requirement": "required"
+    }
+  }
+}

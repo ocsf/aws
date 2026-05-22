@@ -1,0 +1,12 @@
+{
+  "caption": "Node",
+  "description": "Extends the core node object with labels for categorizing and filtering nodes within a graph.",
+  "extends": "node",
+  "name": "node",
+  "attributes": {
+    "labels": {
+      "description": "The list of labels attached to this node. Labels can be used to categorize, filter, and group nodes within a graph.",
+      "requirement": "optional"
+    }
+  }
+}

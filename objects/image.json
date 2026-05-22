@@ -28,6 +28,10 @@
       "description": "Timestamp of when this image was last modified.",
       "requirement": "recommended"
     },
+    "name": {
+      "description": "The name of the container image.",
+      "requirement": "recommended"
+    },
     "platform": {
       "description": "The operating system platform of the image <code>(e.g. AMAZON_LINUX_2)</code>.",
       "requirement": "recommended"
@@ -40,10 +44,6 @@
       "description": "Name of the repository containing this image.",
       "requirement": "recommended"
     },
-    "name": {
-      "description": "The name of the container image.",
-      "requirement": "recommended"
-    },
     "uid": {
       "description": "The unique identifier of the container image.",
       "requirement": "recommended"
@@ -54,7 +54,11 @@
     }
   },
   "constraints": {
-    "at_least_one": ["name", "uid", "uid_alt"]
+    "at_least_one": [
+      "name",
+      "uid",
+      "uid_alt"
+    ]
   },
   "references": [
     {

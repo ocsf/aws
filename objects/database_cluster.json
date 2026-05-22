@@ -4,10 +4,6 @@
   "extends": "_entity",
   "name": "db_cluster",
   "attributes": {
-    "name": {
-      "description": "The name of the database cluster (e.g. mydb).",
-      "requirement": "recommended"
-    },
     "cluster_members": {
       "description": "The list of database cluster members <code>(e.g. [database-3-instance-1]</code>.",
       "requirement": "optional"
@@ -39,6 +35,10 @@
     "is_iam_authentication": {
       "description": "Whether IAM authentication is enabled (e.g. true).",
       "requirement": "optional"
+    },
+    "name": {
+      "description": "The name of the database cluster (e.g. mydb).",
+      "requirement": "recommended"
     },
     "port": {
       "description": "The database port number (e.g. 3306).",
@@ -78,7 +78,11 @@
     }
   },
   "constraints": {
-    "at_least_one": ["name", "uid", "uid_alt"]
+    "at_least_one": [
+      "name",
+      "uid",
+      "uid_alt"
+    ]
   },
   "references": [
     {

@@ -18,7 +18,8 @@
       "account",
       "name",
       "uid",
-      "uid_alt"
+      "uid_alt",
+      "org"
     ]
   }
 }
