@@ -59,6 +59,51 @@
       "profile": "cloud",
       "requirement": "recommended"
     },
+    "state": {
+      "description": "The state of the resource, normalized to the caption of the <code>state_id</code> value. In the case of 'Other', it is defined by the event source. This carries the source-specific value <code>(e.g. an AWS AMI image state such as available, or an EC2 instance state such as running)</code>.",
+      "profile": "aws/cloud_resources",
+      "requirement": "optional"
+    },
+    "state_id": {
+      "description": "The normalized lifecycle state of the resource, resource-type agnostic. The source-specific value is preserved in the <code>state</code> sibling.",
+      "profile": "aws/cloud_resources",
+      "requirement": "optional",
+      "sibling": "state",
+      "enum": {
+        "0": {
+          "caption": "Unknown",
+          "description": "The state is unset or not provided."
+        },
+        "1": {
+          "caption": "Pending",
+          "description": "The resource is being created or provisioned and is not yet usable <code>(e.g. AMI pending, EC2 pending)</code>."
+        },
+        "2": {
+          "caption": "Active",
+          "description": "The resource is created and in service <code>(e.g. AMI available, EC2 running, an enabled resource)</code>."
+        },
+        "3": {
+          "caption": "Suspended",
+          "description": "The resource is temporarily inactive <code>(e.g. EC2 stopped, a disabled or paused resource)</code>."
+        },
+        "4": {
+          "caption": "Deprovisioned",
+          "description": "The resource has been removed or retired <code>(e.g. AMI deregistered, EC2 terminated, a deleted resource)</code>."
+        },
+        "5": {
+          "caption": "Failed",
+          "description": "The resource creation or operation failed, or the resource is in a bad state <code>(e.g. AMI failed, error, or invalid)</code>."
+        },
+        "6": {
+          "caption": "Transient",
+          "description": "The resource is mid-transition between states <code>(e.g. AMI transient, EC2 stopping or shutting-down)</code>."
+        },
+        "99": {
+          "caption": "Other",
+          "description": "The state is not mapped. See the <code>state</code> attribute, which contains a data source specific value."
+        }
+      }
+    },
     "storage_device": {
       "profile": "aws/cloud_resources",
       "requirement": "optional"

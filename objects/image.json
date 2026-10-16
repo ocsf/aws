@@ -20,6 +20,11 @@
       "description": "Number of containers using this image.",
       "requirement": "recommended"
     },
+    "is_public": {
+      "description": "Indicates whether the machine image is publicly shared <code>(e.g. a public AMI)</code>.",
+      "profile": "aws/cloud_resources",
+      "requirement": "optional"
+    },
     "last_used_time": {
       "description": "Timestamp of when this image was last used.",
       "requirement": "recommended"
@@ -44,6 +49,16 @@
       "description": "Name of the repository containing this image.",
       "requirement": "recommended"
     },
+    "root_device_type": {
+      "description": "The type of root device the machine image uses <code>(e.g. ebs, instance-store)</code>.",
+      "profile": "aws/cloud_resources",
+      "requirement": "optional"
+    },
+    "source_resource_uid": {
+      "description": "The unique identifier of the resource the machine image was created from <code>(e.g. the source AMI or instance id)</code>.",
+      "profile": "aws/cloud_resources",
+      "requirement": "optional"
+    },
     "uid": {
       "description": "The unique identifier of the container image.",
       "requirement": "recommended"
@@ -51,6 +66,11 @@
     "uid_alt": {
       "description": "This is the Amazon Resource Name (ARN) of the resource.",
       "requirement": "recommended"
+    },
+    "virtualization_type": {
+      "description": "The virtualization type of the machine image <code>(e.g. hvm, paravirtual)</code>.",
+      "profile": "aws/cloud_resources",
+      "requirement": "optional"
     }
   },
   "constraints": {
