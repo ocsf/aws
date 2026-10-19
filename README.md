@@ -1,6 +1,6 @@
 # AWS Extension to OCSF
 
-[![Version](https://img.shields.io/badge/version-1.2.0--dev-blue.svg)](extension.json)
+[![Version](https://img.shields.io/badge/version-1.2.0-blue.svg)](extension.json)
 [![Name](https://img.shields.io/badge/name-aws-teal.svg)](extension.json)
 [![UID](https://img.shields.io/badge/UID-998-purple.svg)](https://github.com/ocsf/ocsf-schema/blob/main/extensions.md)
 [![License](https://img.shields.io/badge/license-Apache%202.0-green.svg)](LICENSE)
