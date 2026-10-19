@@ -1,0 +1,20 @@
+{
+  "caption": "Affected Software Package",
+  "description": "Extends the core Affected Software Package object with the observed workload state of the package on the affected resource, so consumers can distinguish vulnerable packages that are exercised at runtime from those that are merely installed.",
+  "extends": "affected_package",
+  "name": "affected_package",
+  "attributes": {
+    "workload_state": {
+      "description": "The workload state of the affected package, normalized to the caption of the <code>workload_state_id</code> value. In the case of 'Other', it is defined by the event source.",
+      "requirement": "optional"
+    },
+    "workload_state_id": {
+      "description": "The normalized workload state of the affected package on the resource: whether the package was determined to be part of the workload the resource runs <code>(e.g. a process observed on an EC2 instance, or a package on the workload path of a container image)</code>. The evidence behind the value is in <code>workload_state_reason</code>.",
+      "requirement": "optional"
+    },
+    "workload_state_reason": {
+      "description": "The evidence the scanner used to determine <code>workload_state_id</code> for the affected package.",
+      "requirement": "optional"
+    }
+  }
+}

@@ -42,6 +42,17 @@ Thankyou! -->
 ## [Unreleased]
 
 
+## [v1.2.0] - October 16th, 2026
+
+### Added
+* #### Objects
+  1. Extended `image` with `is_public` (reused from core), `source_resource_uid`, `root_device_type`, and `virtualization_type` for AWS machine image (AMI) findings. Extended `resource_details` with `state`/`state_id`, narrowing the generic core `state_id` via an inline, resource-type-agnostic lifecycle enum (Pending/Active/Suspended/Deprovisioned/Failed/Transient) that maps across AWS resource types (AMI, EC2, etc.).
+  1. Extended `affected_package` with `workload_state`, `workload_state_id`, and `workload_state_reason` so vulnerability findings can state whether a vulnerable package is part of the workload the affected resource runs (Inspector package runtime reachability for EC2 and container images).
+* #### Dictionary Attributes
+  1. Added `source_resource_uid`, `root_device_type`, and `virtualization_type` as `string_t`.
+  1. Added `workload_state_id` as an `integer_t` enum (Unknown/Active/Inactive/Other) with sibling `workload_state` as a `string_t`, and `workload_state_reason` as a `string_t` enum of the scanner evidence values (`PACKAGE_IN_DOCKERFILE_WORKLOAD_PATH`, `PACKAGE_NOT_IN_DOCKERFILE_WORKLOAD_PATH`, `PROCESS_OBSERVED_IN_EC2_RUNTIME`, `PROCESS_NOT_OBSERVED_IN_EC2_RUNTIME`).
+
+
 ## [v1.1.0] - May 22nd, 2026
 
 ### Added

@@ -338,6 +338,63 @@
       "description": "The number of findings that will be fully resolved by remediating this target.",
       "type": "integer_t"
     },
+    "root_device_type": {
+      "caption": "Root Device Type",
+      "description": "The type of root device the machine image uses <code>(e.g. ebs, instance-store)</code>.",
+      "type": "string_t"
+    },
+    "workload_state": {
+      "caption": "Workload State",
+      "description": "The workload state of the affected package, normalized to the caption of the <code>workload_state_id</code> value. In the case of 'Other', it is defined by the event source.",
+      "type": "string_t"
+    },
+    "workload_state_id": {
+      "caption": "Workload State ID",
+      "description": "The normalized workload state of an affected package on the resource: whether the package was determined to be part of the workload the resource runs. The evidence behind the value is described by <code>workload_state_reason</code>.",
+      "sibling": "workload_state",
+      "type": "integer_t",
+      "enum": {
+        "0": {
+          "caption": "Unknown",
+          "description": "The workload state is unknown. The scanner did not evaluate workload state for this package, or the resource type does not support it."
+        },
+        "1": {
+          "caption": "Active",
+          "description": "The package was determined to be part of the workload the resource runs <code>(e.g. a running process was observed on the EC2 instance, or the package is on the container image workload path)</code>."
+        },
+        "2": {
+          "caption": "Inactive",
+          "description": "The package is installed but was not determined to be part of the workload the resource runs <code>(e.g. no running process was observed on the EC2 instance, or the package is not on the container image workload path)</code>."
+        },
+        "99": {
+          "caption": "Other",
+          "description": "The workload state is not mapped. See the <code>workload_state</code> attribute, which contains a data source specific value."
+        }
+      }
+    },
+    "workload_state_reason": {
+      "caption": "Workload State Reason",
+      "description": "The evidence the scanner used to determine the <code>workload_state_id</code> of an affected package.",
+      "type": "string_t",
+      "enum": {
+        "PACKAGE_IN_DOCKERFILE_WORKLOAD_PATH": {
+          "caption": "PACKAGE_IN_DOCKERFILE_WORKLOAD_PATH",
+          "description": "The package is on the workload path declared by the container image's Dockerfile <code>(e.g. ENTRYPOINT, CMD, WORKDIR)</code>. Implies workload state Active."
+        },
+        "PACKAGE_NOT_IN_DOCKERFILE_WORKLOAD_PATH": {
+          "caption": "PACKAGE_NOT_IN_DOCKERFILE_WORKLOAD_PATH",
+          "description": "The package is present in the container image but not on the workload path declared by its Dockerfile. Implies workload state Inactive."
+        },
+        "PROCESS_NOT_OBSERVED_IN_EC2_RUNTIME": {
+          "caption": "PROCESS_NOT_OBSERVED_IN_EC2_RUNTIME",
+          "description": "No running process backed by the package was observed on the EC2 instance during the observation window. Implies workload state Inactive."
+        },
+        "PROCESS_OBSERVED_IN_EC2_RUNTIME": {
+          "caption": "PROCESS_OBSERVED_IN_EC2_RUNTIME",
+          "description": "A running process backed by the package was observed on the EC2 instance. Implies workload state Active."
+        }
+      }
+    },
     "scan_duration": {
       "caption": "Scan Duration",
       "description": "The time span of the network scan job, including start time, end time, and total duration.",
@@ -372,6 +429,11 @@
     "snapshot_id": {
       "caption": "Snapshot ID",
       "description": "The storage device snapshot identifier <code>(e.g. snap-1234567890abcdef0).</code>",
+      "type": "string_t"
+    },
+    "source_resource_uid": {
+      "caption": "Source Resource UID",
+      "description": "The unique identifier of the resource the machine image was created from <code>(e.g. the source AMI or instance id)</code>.",
       "type": "string_t"
     },
     "storage_device": {
@@ -465,6 +527,11 @@
       "caption": "Vendor Score",
       "description": "The vendor-determined score for the finding, reflecting any adjustments applied by the event source. For example, the vendor's adjusted CVSS score after applying environmental metrics.",
       "type": "float_t"
+    },
+    "virtualization_type": {
+      "caption": "Virtualization Type",
+      "description": "The virtualization type of the machine image <code>(e.g. hvm, paravirtual)</code>.",
+      "type": "string_t"
     },
     "zones": {
       "caption": "List of Availability Zones",
